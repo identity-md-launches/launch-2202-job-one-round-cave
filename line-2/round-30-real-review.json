@@ -1,0 +1,68 @@
+{
+  "assessment": "no-added-covered-findings",
+  "changes": [],
+  "comparison_complete": true,
+  "coordinates": {
+    "finding_index": "one-based scanner order, separately in each input",
+    "line_and_byte_column": "one-based; only LF starts a line",
+    "ranges": "zero-based half-open original byte offsets"
+  },
+  "counts": {
+    "added": 0,
+    "after": 0,
+    "before": 0,
+    "persisting": 0,
+    "removed": 0
+  },
+  "detail_order": "Added in after order, removed in before order, persisting in after order.",
+  "details_truncated": false,
+  "engines": {
+    "evidence": {
+      "source_sha256": "5cce4371e455952c3485c13ee9ed9d49f61c9623b60327fc6471d8b3600cd225",
+      "tool": "unicode-text-window",
+      "version": "1"
+    },
+    "scanner": {
+      "source_sha256": "e50d1fb77bd6cfd723c2dbd3749bedf2034c96ea3a2eaf88e4beac4610f6e2f5",
+      "tool": "unicode-lantern",
+      "version": "1.0.0"
+    }
+  },
+  "limitations": [
+    "Heuristic triage, not proof of deception or absence of deception.",
+    "This is occurrence comparison, not edit tracking or a contextual safety verdict.",
+    "Moved or context-changed occurrences with identical signatures persist.",
+    "Reordering identifiers can change the first collision witness and reported statuses.",
+    "Each file is scanned independently; no cross-file collision detection.",
+    "Limited Latin/Greek/Cyrillic mapping, not full Unicode confusables.",
+    "Not a language parser; identifiers in comments and strings also count.",
+    "Raw UTF-8 only; literal backslash escapes are not decoded as JSON or source code.",
+    "Byte evidence is unredacted and may split UTF-8 characters.",
+    "Excerpts contain at most 16 context bytes per side and 64 implicated bytes.",
+    "Semantic previews may be cut inside an escape; do not parse them as complete escapes.",
+    "Hashes identify bytes, not authorship or authenticity; matching uses exact values, not hashes.",
+    "A detail limit omits evidence objects but never changes the complete counts."
+  ],
+  "matching": "Exact rule, implicated spelling, semantic data and first witness spelling; first-to-first multiset pairing, excluding positions and context.",
+  "max_changes": 100,
+  "omitted_details": 0,
+  "retained_details": 0,
+  "schema_version": 1,
+  "sources": {
+    "after": {
+      "bytes": 14374,
+      "finding_count": 0,
+      "label": "line-4/tools/unit-flint/unit_flint.py",
+      "sha256": "c683e558cdbdf6cf73d4b32572b6fa498b80e7816483b882bf2d51adfff3062e"
+    },
+    "before": {
+      "bytes": 12506,
+      "finding_count": 0,
+      "label": "test/scratch/unit-flint-before.py",
+      "sha256": "ae71dba710f25c1940af9400253769f1efa4a83bb4ec80454be723221c46f09d"
+    }
+  },
+  "tool": "unicode-delta",
+  "tool_version": "1.0.0",
+  "unicode_version": "16.0.0"
+}

@@ -1,0 +1,44 @@
+{
+  "round": 30,
+  "structural_checks": "passed",
+  "goal_bytes_unchanged": true,
+  "old_numbered_records_unchanged": 29,
+  "new_record": "dist/line-2/30.json",
+  "inherited_tools_unchanged": true,
+  "scope_check_passed": true,
+  "new_files_under_100000_bytes_outside_artifacts": true,
+  "required_output_untracked": true,
+  "wall_sha256": "910ffe9b840bedf877cbf4ce29a6f4c5165afa517b719d1ec13d681f621e0bec",
+  "media": "round-30-media.json",
+  "tests": {
+    "new": 21,
+    "inherited": 137,
+    "total": 158,
+    "failures": 0,
+    "errors": 0,
+    "new_command": "python3 -B -m unittest discover -s line-2/tools/unicode-delta -p test_unicode_delta.py -v",
+    "inherited_results": "round-30-inherited-checks.json",
+    "new_cases": "Independent multiset oracle, exact citations, collision witnesses, full scans, limits, ASCII output, CLI statuses and portability"
+  },
+  "real_input_review": {
+    "report": "round-30-real-review.json",
+    "before_commit": "41b0e8d",
+    "after_last_changed_commit": "fc72a09",
+    "source_path": "line-4/tools/unit-flint/unit_flint.py",
+    "before_bytes": 12506,
+    "after_bytes": 14374,
+    "counts": {
+      "added": 0,
+      "after": 0,
+      "before": 0,
+      "persisting": 0,
+      "removed": 0
+    }
+  },
+  "new_tool_hashes": {
+    "line-2/tools/unicode-delta/README.md": "16679487d4d164a9299c3a04a68f7069b2ba3911821fdb89d3f8f7a5f82e6f50",
+    "line-2/tools/unicode-delta/test_unicode_delta.py": "16ad18de73009d620169766a0e6157d78ee9c73103eebf981a71fe6e691160d0",
+    "line-2/tools/unicode-delta/unicode_delta.py": "564dd3685cbf9b8112b24aa4f478e8d8f6ebbe6a8fcbf4fb254af5bba4668f88"
+  },
+  "authority": "Local observations only; neither behavioral safety nor visual quality is independently certified."
+}

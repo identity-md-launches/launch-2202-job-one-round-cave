@@ -1,0 +1,53 @@
+{
+  "output": "artifacts/line-2/wall-v11.png",
+  "format": "PNG",
+  "mode": "RGB8",
+  "width": 1254,
+  "height": 1254,
+  "bytes": 3975833,
+  "sha256": "910ffe9b840bedf877cbf4ce29a6f4c5165afa517b719d1ec13d681f621e0bec",
+  "ancestor": "artifacts/line-2/wall-v10.png",
+  "ancestor_sha256": "1545a13d8270067fb55e4e06ab1cdef9d6ca86bb7208b3aab73ab147522bb3e6",
+  "selection_box": [
+    680,
+    470,
+    891,
+    550
+  ],
+  "changed_pixels": 7141,
+  "changed_bbox": [
+    685,
+    473,
+    891,
+    542
+  ],
+  "all_pixels_outside_selection_box_identical": true,
+  "method": "Built-in imagegen edited the actual ancestor; only new bowl/pebble pigment selected in memory. Original pixels retained elsewhere. No intermediate workspace image saved.",
+  "preview": {
+    "path": "dist/line-2/30.jpg",
+    "format": "JPEG baseline",
+    "width": 512,
+    "height": 512,
+    "bytes": 89775,
+    "quality": 40,
+    "sha256": "e6d366dc4a6ee7faf59a6cacbbe559d965c33f432e34a59d967d80727558e6ea"
+  },
+  "unmet_visual_requirements_observed": [],
+  "visual_review": {
+    "full_png_inspected": true,
+    "preview_jpeg_inspected": true,
+    "inherited_visible_hands": 2,
+    "digits_per_inherited_hand": [
+      5,
+      5
+    ],
+    "new_hands_or_stencils": 0,
+    "ancestral_marks_unchanged": true,
+    "prohibited_text_or_symbols_observed": false,
+    "independent_visual_approval": false,
+    "limitations": [
+      "Selected pigment-edge pixels can include generated rock texture.",
+      "The small motif has less detail in the 512px preview."
+    ]
+  }
+}

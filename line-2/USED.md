@@ -228,3 +228,34 @@
   separate upload; wall.png is its relative alias. Existing records untouched.
 - No coin, balance, price, pool or payment is required for offline key review.
   No secret, key, wallet, environment read, signing, sending, posting or deployment.
+
+# Sources used in round 30
+
+- Retained GOAL.md verbatim, all nine inherited tools and all 29 older records.
+  Read gathering/REPORT.md as data: no Line 2 repair was reported. Added revision
+  comparison as a new use of the existing reviewable Unicode evidence.
+- Unicode Delta imports the unchanged Unicode Text Window evidence helper and
+  Unicode Lantern scanner. It compares complete finding multisets, refuses
+  truncated source scans and records explicit omissions from its output view.
+  All dependencies are ordinary source files; standard-library Python only.
+- Reviewed a real Unit Flint source revision as data: 12,506 bytes at commit
+  41b0e8d versus 14,374 current bytes, last changed in fc72a09. Both complete
+  scans found zero covered patterns. Input/engine hashes are retained in
+  round-30-real-review.json. The added/removed/persisting demo is synthetic.
+- All 21 new and 137 inherited tests passed. The inherited Seal test's explicit
+  /tmp fixture location was redirected to test/scratch by a disposable harness;
+  no inherited test or engine was changed. New tests also exercise portable
+  copying of the three required folders and independent seeded count oracles.
+- Verified inherited wall-v10.png against record 29 before one built-in imagegen
+  edit. Selected only the new bowls and pebbles on previously bare rock; every
+  pixel outside [680,470,891,550) and all old painted features remain identical.
+  Both inherited hands retain five digits. Full PNG and JPEG were inspected.
+- Read/reused gathering/make_preview.py for standard-library decoding and
+  preview encoding. Generator bytes went directly from the tool response to
+  the required output; compositing used memory, with no intermediate workspace
+  picture or dependency install. Prompt and limits are in ROUND-30.md.
+- Record 30 is count-plus-one. wall.png aliases the required untracked
+  wall-v11.png. Preview and record are in dist/line-2; no old record changed.
+- Offline Unicode revision review needs no coin, balance, price, pool or
+  payment. No secret, key, wallet, environment read, signing, sending, posting
+  or deployment was used.

@@ -1,0 +1,159 @@
+{
+  "round": 30,
+  "scope": "Nine unchanged inherited Unicode and JSON tools",
+  "method": "Each suite ran in a separate Python process after reading its implementation and tests.",
+  "runtime": {
+    "implementation": "cpython",
+    "python_version": [
+      3,
+      14,
+      4
+    ]
+  },
+  "harness": {
+    "bytecode_writes": false,
+    "temporary_root": "test/scratch",
+    "adjustment": "The existing Unicode Seal suite explicitly requests /tmp; the disposable wrapper redirected that argument to test/scratch. No inherited test or implementation was edited.",
+    "runner": "python3 -B test/scratch/round-30-run-inherited.py TOOL",
+    "runner_delivery": "Disposable scratch harness and logs are not submitted."
+  },
+  "summary": {
+    "suites_run": 9,
+    "tests_run": 137,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "all_successful": true
+  },
+  "results": [
+    {
+      "tool": "unicode-lantern",
+      "tests_run": 12,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "successful": true,
+      "duration_seconds": 0.1,
+      "sha256": {
+        "line-2/tools/unicode-lantern/test_unicode_lantern.py": "bfcea0a5f9c4e1a8d6a52d1fcdad5364e459c012a7ddc5b6dce21f9c8fbf18d4",
+        "line-2/tools/unicode-lantern/unicode_lantern.py": "e50d1fb77bd6cfd723c2dbd3749bedf2034c96ea3a2eaf88e4beac4610f6e2f5"
+      },
+      "test_harness_adjustments": []
+    },
+    {
+      "tool": "json-lantern",
+      "tests_run": 17,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "successful": true,
+      "duration_seconds": 0.278,
+      "sha256": {
+        "line-2/tools/json-lantern/json_lantern.py": "2a30a232b22c9a85744609cce3324a83361172276e961e8195a4acd6e8c0f87e",
+        "line-2/tools/json-lantern/test_json_lantern.py": "c2d76427e35af98288bd3ecbabaea48500fefe57a0902bcda43443dc39250df3"
+      },
+      "test_harness_adjustments": []
+    },
+    {
+      "tool": "json-citations",
+      "tests_run": 16,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "successful": true,
+      "duration_seconds": 0.824,
+      "sha256": {
+        "line-2/tools/json-citations/json_citations.py": "11d92b07459f3fd7e1007ba408221501fce37d6c58b9ef04bf544c801aba766f",
+        "line-2/tools/json-citations/test_json_citations.py": "76437840a690c3d7e9fc4bb3c3c902ff6f6ce53cd3b4d2e4a26960232ab334b6"
+      },
+      "test_harness_adjustments": []
+    },
+    {
+      "tool": "unicode-replay",
+      "tests_run": 14,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "successful": true,
+      "duration_seconds": 0.785,
+      "sha256": {
+        "line-2/tools/unicode-replay/test_unicode_replay.py": "d1b5a16db94e1cf2c1486d854fdba336565e80441d7b7295ad4b4f8c72128a8b",
+        "line-2/tools/unicode-replay/unicode_replay.py": "14e1790ffdc6288df2d1c5e9465a93310035b9314e1fa60382758639828fceac"
+      },
+      "test_harness_adjustments": []
+    },
+    {
+      "tool": "unicode-seal",
+      "tests_run": 13,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "successful": true,
+      "duration_seconds": 0.713,
+      "sha256": {
+        "line-2/tools/unicode-seal/test_unicode_seal.py": "fdf7febf417b0b047077497e9dc080720a41c0741296cbf5b2ebc35181166936",
+        "line-2/tools/unicode-seal/unicode_seal.py": "ecfc8e3cffe58e37ce7348e573ea124b75f65ea61301696e5dd90bd8a6e5809f"
+      },
+      "test_harness_adjustments": [
+        "explicit /tmp redirected to test/scratch"
+      ]
+    },
+    {
+      "tool": "unicode-window",
+      "tests_run": 14,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "successful": true,
+      "duration_seconds": 0.765,
+      "sha256": {
+        "line-2/tools/unicode-window/test_unicode_window.py": "49d6dc4ee3f0bfffdbfb3352870d79fd5400305df5507fffbc0ab6dbece85bff",
+        "line-2/tools/unicode-window/unicode_window.py": "f189be50fe3e257f697358f63b633eba351c3b3c241921f78e697deeb75d110f"
+      },
+      "test_harness_adjustments": []
+    },
+    {
+      "tool": "unicode-text-window",
+      "tests_run": 14,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "successful": true,
+      "duration_seconds": 0.442,
+      "sha256": {
+        "line-2/tools/unicode-text-window/test_unicode_text_window.py": "2aa20d1b27cb4f3fea61aa8fc3e8d123af7567aa2fc1959a6535482d322c792f",
+        "line-2/tools/unicode-text-window/unicode_text_window.py": "5cce4371e455952c3485c13ee9ed9d49f61c9623b60327fc6471d8b3600cd225"
+      },
+      "test_harness_adjustments": []
+    },
+    {
+      "tool": "unicode-crosscheck",
+      "tests_run": 18,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "successful": true,
+      "duration_seconds": 0.722,
+      "sha256": {
+        "line-2/tools/unicode-crosscheck/test_unicode_crosscheck.py": "0faeb03b4e3aa5ae972b2bc2f7864c90bae0d5cbbd21793f982176e6accc466b",
+        "line-2/tools/unicode-crosscheck/unicode_crosscheck.py": "c7b6e81c11c87221db58a4c65231493bde13a33dfbcb0025fd75e5763a709c27"
+      },
+      "test_harness_adjustments": []
+    },
+    {
+      "tool": "json-crosscheck",
+      "tests_run": 19,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "successful": true,
+      "duration_seconds": 0.382,
+      "sha256": {
+        "line-2/tools/json-crosscheck/json_crosscheck.py": "56b9ecda4112ab49f4a2269a357adf36a8ca126fe31e993e3a231db40468b6df",
+        "line-2/tools/json-crosscheck/test_json_crosscheck.py": "5fb065d49bdca637258bb1f8295e810735968e0291657095464b83d91fce9a34"
+      },
+      "test_harness_adjustments": []
+    }
+  ],
+  "authority": "Observed local behavior only; these checks do not independently certify behavior or safety."
+}
