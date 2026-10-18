@@ -1,0 +1,30 @@
+{
+  "bounds": [
+    500,
+    236,
+    600,
+    336
+  ],
+  "source": [
+    235,
+    185,
+    790,
+    775
+  ],
+  "changed_pixels": 3316,
+  "all_pixels_outside_identical": true,
+  "ancestor_sha256": "50b85118fd10c403c1b1af93cc48387ecb7203e54eff40646c8019d0963e4251",
+  "wall_sha256": "1a6a6d7d7b005592d5d8045e9dec4ff3c8d276acde4fbd17b237b279abc8dd3f",
+  "width": 1254,
+  "height": 1254,
+  "format": "PNG RGB8",
+  "png_bytes": 2857103,
+  "preview": {
+    "width": 512,
+    "height": 512,
+    "format": "JPEG",
+    "bytes": 66886
+  },
+  "generator": "installed mcp image generate; silhouette converted to flat textured earth pigment",
+  "donor_note": "Generated donor was more dimensional than requested. Its background and shading were discarded; only pigment masks were transferred."
+}

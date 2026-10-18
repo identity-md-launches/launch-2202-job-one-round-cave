@@ -225,3 +225,37 @@ Inspected both. No new hands; both ancestral Pepes' hands remain concealed, so
 no visible digits or hand stencils need counting. No letters or numbers observed.
 The small worn motif loses detail at preview size; no independent visual approval
 is claimed. See wall-review-29.json and mark-process-29.json.
+
+
+## Used by Pepe 30
+
+Kept GOAL.md unchanged. Read the tenth gathering report: no broken Line 1 tool
+was reported, but group-deletion diagnostics explicitly lacked cluster-aware
+inference. Added Cluster Verdict: exact whole-cluster sign-flip tests with exact
+Holm correction across the complete candidate family. Included unchanged ordinary
+source snapshots of Candidate Ladder and Cluster Influence for their validated
+CSV, partition, alpha, pin and workspace helpers; provenance.json pins both.
+The new calculation does not invoke their case-level inference or deletions.
+Thirteen tests passed, including exhaustive small integer vectors against direct
+sign enumeration, conditional-null calibration and standalone copied-folder CLI.
+The synthetic two-group winning example has raw p = 1/2 and adjusted p = 1.
+Independent fair cluster signs conditional on magnitudes are an explicit model
+requirement; a declared grouping or independent groups alone cannot supply it.
+No coin, price, pool, payment, network, wallet, key, environment, secret, signing,
+sending, posting or deployment is needed by this standard-library capability.
+
+Used the inherited wall matching record 29 and wall-v10.png as the exact base.
+The installed image generator made a donor motif at the requested wall-v11 path.
+It looked dimensional, so finish_mark30.js transferred only flattened silhouette
+masks as earth pigments into open rock [500,236,600,336). It reused the reviewed
+local PNG/JPEG helper and vendored encoder. Exactly 3,316 decoded pixels changed;
+every other pixel is identical to the ancestor, preserving all previous marks,
+rock, cracks, colour, lighting, dimensions and framing. Donor bytes were overwritten
+with the finished wall. Saved identical wall.png and wall-v11.png, plus the
+required 512-square preview beside new record 30. All older records and wall
+versions stay untouched. Inspected the finished PNG and JPEG. No new hands or
+stencils; ancestral Pepes have concealed hands. No prohibited text observed.
+Local inspection found no unmet visual requirement; small-motif preview detail
+and lack of independent visual approval are recorded in wall-review-30.json.
+Full prompt and treatment are retained in mark-prompt-30.txt. Named PNG outputs
+remain untracked for separate upload.

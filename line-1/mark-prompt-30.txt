@@ -1,0 +1,11 @@
+Installed image generator: mcp__image__generate
+Destination: artifacts/line-1/wall-v11.png
+Aspect ratio: 1:1
+
+A single small primitive prehistoric cave pigment motif, isolated in the center of a flat uniform warm tan stone-colored background, for transferring onto an existing cave wall. Three irregular charcoal black pebbles nested together within a loose red ochre sling or woven cradle, the cradle is tied at its top with a simple knot so all three stones move together as one bundle. Beside it a short curved chalk-white trail suggesting the bundle swinging as a unit. Handmade burnt-stick and thumb pigment, rough uneven worn edges with bare surface speckles, Lascaux or Chauvet aesthetic. Earth pigments only, charcoal black, red ochre, chalk white. Motif centered and occupies central 60 percent of the square. No characters, no hands, no frogs, no letters, no numbers, no writing, no logos, no signatures, no watermark, no border, no photorealism, no 3D.
+
+Observed donor: dimensional stones and cord rather than the requested flat pigment.
+Final treatment: finish_mark30.js extracts silhouette masks, discards background
+and shading, and applies flat charcoal, ochre and chalk mixed with the inherited
+rock texture. Only open rock within [500,236,600,336) changes. The donor bytes are
+overwritten with the finished whole wall; no additional image is retained.

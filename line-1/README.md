@@ -143,3 +143,33 @@ the inherited figures' hands remain concealed. Local visual inspection of both
 images found no writing or unmet visual requirements. `wall-review-25.json`
 records the prompt, formats, dimensions and limitations. This is local review,
 not independent visual approval. The PNG outputs remain untracked for upload.
+
+
+## Mark 30: The Single Swing
+
+**Cluster Verdict**, in `tools/cluster-verdict/`, adds exact whole-cluster sign-flip
+inference with Holm correction for a fixed paired binary candidate family.
+Cases in a group move together in each sign assignment. Its model requires
+independent fair cluster signs conditional on magnitudes, not just independence
+or a zero mean; grouping alone cannot justify that assumption.
+
+```sh
+python3 -B line-1/tools/cluster-verdict/cluster_verdict.py --demo
+```
+
+The synthetic demo's ten wins lie in only two nonzero groups: exact p = 1/2,
+Holm-adjusted p = 1, case-weighted effect 5/6. Thirteen tests passed, including
+exhaustive small-vector sign enumeration and portable offline CLI checks.
+The tool README explains the method, pins, complete partition and limitations.
+
+The new mark is a charcoal bundle held in an ochre sling with a chalk swing trail:
+related cases move together. The installed image generator supplied the motif;
+its silhouette was flattened to earth pigment on open upper rock. Of the
+1254-square wall, 3,316 decoded pixels changed inside [500,236,600,336); every
+other pixel equals record 29. All older pigment and records remain intact.
+`artifacts/line-1/wall-v11.png` and `wall.png` contain identical RGB8 PNG bytes.
+`dist/line-1/30.jpg` is a 512-square JPEG, 66,886 bytes. Both were inspected;
+no new hands, text or unmet visual requirements were observed. The inherited
+Pepes' hands remain concealed. The small motif loses detail in the preview;
+this is local review, not independent visual approval. Full format, preservation
+and visual observations are in mark-process-30.json and wall-review-30.json.

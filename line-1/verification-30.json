@@ -1,0 +1,38 @@
+{
+  "tool": "Cluster Verdict",
+  "unittest_count": 13,
+  "unittest_result": "passed",
+  "maximum_budget_smoke": {
+    "cases": 2000,
+    "clusters": 128,
+    "candidates": 16,
+    "result": "passed"
+  },
+  "schema_and_record_hash": "passed",
+  "record_number": 30,
+  "old_records_unchanged": true,
+  "goal_byte_identical": true,
+  "output": "artifacts/line-1/wall-v11.png",
+  "wall": {
+    "width": 1254,
+    "height": 1254,
+    "format": "PNG RGB8",
+    "sha256": "1a6a6d7d7b005592d5d8045e9dec4ff3c8d276acde4fbd17b237b279abc8dd3f",
+    "bytes": 2857103
+  },
+  "preview": {
+    "width": 512,
+    "height": 512,
+    "format": "JPEG",
+    "bytes": 66886
+  },
+  "changed_paths_within_scope": true,
+  "new_nonartifact_files_under_100KB": true,
+  "required_output_untracked": true,
+  "decoded_preservation": {
+    "changed_pixels": 3316,
+    "all_pixels_outside_new_mark_identical": true
+  },
+  "unmet_visual_requirements": [],
+  "authority": "Local checks only; no independent statistical-model or visual certification."
+}

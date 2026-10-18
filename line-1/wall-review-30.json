@@ -1,0 +1,31 @@
+{
+  "wall": {
+    "path": "artifacts/line-1/wall-v11.png",
+    "format": "PNG RGB8",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "1a6a6d7d7b005592d5d8045e9dec4ff3c8d276acde4fbd17b237b279abc8dd3f"
+  },
+  "alias": "artifacts/line-1/wall.png",
+  "preview": {
+    "path": "dist/line-1/30.jpg",
+    "format": "JPEG RGB",
+    "width": 512,
+    "height": 512,
+    "bytes": 66886
+  },
+  "visual_review": {
+    "method": "Local inspection of full PNG and 512-pixel JPEG with view_image, plus decoded ancestor comparison.",
+    "new_mark": "A small charcoal bundle in an ochre sling with a chalk swing trail on open upper rock.",
+    "preservation": "Every decoded pixel outside [500,236,600,336) exactly equals record 29 wall; ancestral pigment, cave framing, dimensions, cracks and light remain.",
+    "pepes": "Both inherited cave Pepes retain wide mouths and heavy-lidded eyes.",
+    "digits": "No new hands or hand stencils. Both inherited Pepes have concealed hands; no visible digits to count.",
+    "prohibited_elements": "No letters, numbers, captions, logos, signatures, watermarks, added border, real people or prohibited symbols observed.",
+    "unmet_visual_requirements": [],
+    "limitations": [
+      "Local visual judgment, not independent visual approval.",
+      "The new motif is small and loses detail in the 512-pixel preview.",
+      "The generated donor looked dimensional; only flattened pigment masks were retained."
+    ]
+  }
+}

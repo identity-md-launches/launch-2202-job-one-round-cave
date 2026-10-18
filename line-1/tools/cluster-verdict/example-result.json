@@ -1,0 +1,110 @@
+{
+  "schema": "cluster-verdict-v1",
+  "input_sha256": "1fb7c489e08611beed177db1c24bfaf09025a658e1afa11a4a9dd3ad90bf9248",
+  "mapping_sha256": "a9b695c8adcbdba5af1d3c2d3d4a7a22d352ffa8dc0e0ee5062ccf650bf468f1",
+  "paired_cases": 12,
+  "baseline_passes": 2,
+  "candidate_count": 2,
+  "clusters": 3,
+  "familywise_alpha": {
+    "numerator": "1",
+    "denominator": "20"
+  },
+  "method": "exact two-sided whole-cluster sign-flip; Holm familywise correction",
+  "statistic": "sum of candidate-minus-baseline binary pass differences across all cases",
+  "candidates": [
+    {
+      "observed": 10,
+      "nonzero_clusters": 2,
+      "zero_clusters": 1,
+      "tail_assignments": "2",
+      "assignments": "4",
+      "distinct_null_sums": 3,
+      "name": "first",
+      "candidate_passes": 12,
+      "case_weighted_effect": {
+        "numerator": "5",
+        "denominator": "6"
+      },
+      "exact_two_sided_p": {
+        "numerator": "1",
+        "denominator": "2"
+      },
+      "holm_adjusted_p": {
+        "numerator": "1",
+        "denominator": "1"
+      },
+      "familywise_reject_sign_exchangeability": false,
+      "observed_direction": "candidate"
+    },
+    {
+      "observed": 10,
+      "nonzero_clusters": 2,
+      "zero_clusters": 1,
+      "tail_assignments": "2",
+      "assignments": "4",
+      "distinct_null_sums": 3,
+      "name": "second",
+      "candidate_passes": 12,
+      "case_weighted_effect": {
+        "numerator": "5",
+        "denominator": "6"
+      },
+      "exact_two_sided_p": {
+        "numerator": "1",
+        "denominator": "2"
+      },
+      "holm_adjusted_p": {
+        "numerator": "1",
+        "denominator": "1"
+      },
+      "familywise_reject_sign_exchangeability": false,
+      "observed_direction": "candidate"
+    }
+  ],
+  "cluster_details": [
+    {
+      "cluster": "related-a",
+      "cases": 5,
+      "candidate_minus_baseline_passes": [
+        5,
+        5
+      ]
+    },
+    {
+      "cluster": "related-b",
+      "cases": 5,
+      "candidate_minus_baseline_passes": [
+        5,
+        5
+      ]
+    },
+    {
+      "cluster": "agreement",
+      "cases": 2,
+      "candidate_minus_baseline_passes": [
+        0,
+        0
+      ]
+    }
+  ],
+  "cluster_details_omitted": 0,
+  "complete_cluster_details_sha256": "dde76ddd7d9b6bc88cf8822ed6369618c13379eeb2ac0052d8f75ab7de22d892",
+  "assumptions": [
+    "For each candidate null, conditional on cluster difference magnitudes, nonzero cluster signs are independent fair signs.",
+    "This needs a justified whole-cluster swap randomization under a sharp null, or an independent sign-symmetric cluster-difference model.",
+    "Related cases may be dependent within a cluster; all dependence across clusters must be justified absent.",
+    "Independent clusters alone, or zero mean alone, do not establish sign exchangeability.",
+    "Case set, binary pass rule, cluster partition, full candidate family, alpha and one analysis were fixed before viewing outcomes.",
+    "Each cluster is a disjoint nonempty group. Each case has one complete observation for all planned systems."
+  ],
+  "limitations": [
+    "A declared grouping cannot prove independence or exchangeability; this output does not certify either assumption.",
+    "Holm covers the complete supplied candidate family at one planned analysis, not repeated looks or chosen groupings.",
+    "Effects weight cases equally; large clusters carry more statistic weight. This is not an equal-cluster mean test.",
+    "Zero cluster differences cancel internally and add no sign information even when cases disagree within a group.",
+    "Non-rejection is not equivalence; rejection alone is not improvement, practical value or population validity.",
+    "Input digests establish byte identity, not honest labels, representative sampling or preregistration time."
+  ],
+  "data_kind": "synthetic_demonstration"
+}
