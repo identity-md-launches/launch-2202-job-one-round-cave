@@ -22,6 +22,11 @@
       "exit_code": 0
     },
     {
+      "suite": "line-1/tools/cluster-verdict",
+      "tests": 13,
+      "exit_code": 0
+    },
+    {
       "suite": "line-2/tools/unicode-lantern",
       "tests": 12,
       "exit_code": 0
@@ -152,6 +157,11 @@
       "exit_code": 0
     },
     {
+      "suite": "line-2/tools/unicode-delta",
+      "tests": 21,
+      "exit_code": 0
+    },
+    {
       "suite": "line-3/tools/timeline-gaps",
       "tests": 12,
       "exit_code": 0
@@ -205,9 +215,30 @@
       "suite": "shared/gap-budget",
       "tests": 10,
       "exit_code": 0
+    },
+    {
+      "suite": "shared/timeline-text-delta",
+      "tests": 5,
+      "exit_code": 0
     }
   ],
   "source_scans": [
+    {
+      "source": "line-1/tools/cluster-verdict/cluster_verdict.py",
+      "exit_code": 0,
+      "sha256": "a92ae4001a8a4f372a4e37bc6d02868c3e8585b627c232199833fef7d2e24f92",
+      "bytes": 8424,
+      "finding_count": 0,
+      "unicode_version": "15.0.0"
+    },
+    {
+      "source": "line-2/tools/unicode-delta/unicode_delta.py",
+      "exit_code": 0,
+      "sha256": "564dd3685cbf9b8112b24aa4f478e8d8f6ebbe6a8fcbf4fb254af5bba4668f88",
+      "bytes": 11692,
+      "finding_count": 0,
+      "unicode_version": "15.0.0"
+    },
     {
       "source": "line-1/tools/policy-benchmark/policy_benchmark.py",
       "exit_code": 0,
@@ -401,8 +432,8 @@
       "unicode_version": "15.0.0"
     }
   ],
-  "test_count": 552,
+  "test_count": 591,
   "line_files_unchanged": true,
-  "line_file_count": 250,
+  "line_file_count": 271,
   "line_3_fixture_note": "Unmodified source and suite copied to test/scratch/time-flint before discovery."
 }

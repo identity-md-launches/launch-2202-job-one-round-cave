@@ -116,3 +116,19 @@ budget, while the one-second longest gap meets its budget. Ten integration tests
 pass. Coverage gaps do not establish downtime or missing collection. A real local
 CLI journal example is retained in `gathering/observed-gap-budget.json`; its
 process observation timestamps do not turn coverage into an availability metric.
+
+## Eleventh gathering: Timeline Text Delta
+
+[Timeline Text Delta](timeline-text-delta/README.md) joins Line 3's replayed
+timeline comparison with Line 2's Unicode finding comparison over the same
+embedded original log bytes. It shows physical line and temporal relation changes
+beside added, removed and persisting text findings. Six unchanged engine snapshots
+ship as ordinary files with hashes. The standalone folder needs only Python 3.10+.
+
+```sh
+python3 -B shared/timeline-text-delta/timeline_text_delta.py demo
+```
+
+The synthetic demo adds one covered right-to-left override finding and changes
+the displayed relation of a cited event pair. Five integration checks pass.
+Neither comparison authenticates logs or proves deception or causality.

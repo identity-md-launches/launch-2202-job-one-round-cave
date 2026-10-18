@@ -1,10 +1,30 @@
 {
-  "name": "Not painted yet",
-  "image": "https://api.imd.fun/artifacts/1694079b8c096876644b7db6f84112f2550b53ad024540401ad702809cb35941",
+  "name": "The Unhidden Shift",
+  "image": "https://api.imd.fun/artifacts/8c3c480ea51201f637568338832c10a366bec31b85c271d97d8155aff9d18b04",
   "attributes": [
     {
       "trait_type": "Cave",
       "value": "Roots"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Gathering"
+    },
+    {
+      "trait_type": "Number",
+      "value": 11
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "Timeline Text Delta"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "A changed trail is rechecked for hidden marks and uncertain order."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Gathering"
     }
   ]
 }

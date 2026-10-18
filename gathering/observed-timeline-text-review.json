@@ -1,0 +1,280 @@
+{
+  "format": "timeline-text-delta/1",
+  "selected_source": "local-cli-journal.log",
+  "timeline": {
+    "format": "timeline-diff/1",
+    "before_replay": {
+      "verified": true,
+      "sources": 1,
+      "events": 8,
+      "omitted": 0,
+      "clock_uncertainty_ms": 0
+    },
+    "after_replay": {
+      "verified": true,
+      "sources": 1,
+      "events": 8,
+      "omitted": 0,
+      "clock_uncertainty_ms": 750
+    },
+    "options": {
+      "before": {
+        "ignore_unmatched": false,
+        "clock_uncertainty_ms": 0
+      },
+      "after": {
+        "ignore_unmatched": false,
+        "clock_uncertainty_ms": 750
+      },
+      "changed": true
+    },
+    "source_changes": [],
+    "line_changes": {
+      "counts": {
+        "added": 0,
+        "removed": 0,
+        "changed-line": 0,
+        "reclassified": 0,
+        "changed-interval": 8
+      },
+      "total": 8,
+      "shown": [
+        {
+          "source": "local-cli-journal.log",
+          "line": 1,
+          "change": "changed-interval",
+          "before": {
+            "kind": "event",
+            "line_sha256": "fc894d2d564ccaaae05dcfbe97bcdfad64bb648fc80fde16dd48b3bfc5efb39f"
+          },
+          "after": {
+            "kind": "event",
+            "line_sha256": "fc894d2d564ccaaae05dcfbe97bcdfad64bb648fc80fde16dd48b3bfc5efb39f"
+          }
+        },
+        {
+          "source": "local-cli-journal.log",
+          "line": 2,
+          "change": "changed-interval",
+          "before": {
+            "kind": "event",
+            "line_sha256": "093aa6bdbc039dc2647d337dc05e6850cae4abe34f63d406382cd62fa9fb73ad"
+          },
+          "after": {
+            "kind": "event",
+            "line_sha256": "093aa6bdbc039dc2647d337dc05e6850cae4abe34f63d406382cd62fa9fb73ad"
+          }
+        },
+        {
+          "source": "local-cli-journal.log",
+          "line": 3,
+          "change": "changed-interval",
+          "before": {
+            "kind": "event",
+            "line_sha256": "5f69488771acd893081c9d6687d830e812417c1e3e35cbce1683cfc4dac7f4aa"
+          },
+          "after": {
+            "kind": "event",
+            "line_sha256": "5f69488771acd893081c9d6687d830e812417c1e3e35cbce1683cfc4dac7f4aa"
+          }
+        },
+        {
+          "source": "local-cli-journal.log",
+          "line": 4,
+          "change": "changed-interval",
+          "before": {
+            "kind": "event",
+            "line_sha256": "8a971a26f80e3996de120567177c8e12e81114b6b61545a62f27d7a491eb4b03"
+          },
+          "after": {
+            "kind": "event",
+            "line_sha256": "8a971a26f80e3996de120567177c8e12e81114b6b61545a62f27d7a491eb4b03"
+          }
+        },
+        {
+          "source": "local-cli-journal.log",
+          "line": 5,
+          "change": "changed-interval",
+          "before": {
+            "kind": "event",
+            "line_sha256": "6c48cd39a5d27cbd201fce3423a78e535a24b564072fba970da9c1ef7cf4eb26"
+          },
+          "after": {
+            "kind": "event",
+            "line_sha256": "6c48cd39a5d27cbd201fce3423a78e535a24b564072fba970da9c1ef7cf4eb26"
+          }
+        },
+        {
+          "source": "local-cli-journal.log",
+          "line": 6,
+          "change": "changed-interval",
+          "before": {
+            "kind": "event",
+            "line_sha256": "066e3f29d45cea11904f03d75f1d46148322fab527fd4e4c1eb5bbbb960db99d"
+          },
+          "after": {
+            "kind": "event",
+            "line_sha256": "066e3f29d45cea11904f03d75f1d46148322fab527fd4e4c1eb5bbbb960db99d"
+          }
+        },
+        {
+          "source": "local-cli-journal.log",
+          "line": 7,
+          "change": "changed-interval",
+          "before": {
+            "kind": "event",
+            "line_sha256": "7ab8f28c21d9352f4f07ec76ed121f44b869e782feeb2e7f4a22077259b33e98"
+          },
+          "after": {
+            "kind": "event",
+            "line_sha256": "7ab8f28c21d9352f4f07ec76ed121f44b869e782feeb2e7f4a22077259b33e98"
+          }
+        },
+        {
+          "source": "local-cli-journal.log",
+          "line": 8,
+          "change": "changed-interval",
+          "before": {
+            "kind": "event",
+            "line_sha256": "dd0257659683d28c189cfd32a08a9594fcb6fa06f78bad366227bf633a7c3d85"
+          },
+          "after": {
+            "kind": "event",
+            "line_sha256": "dd0257659683d28c189cfd32a08a9594fcb6fa06f78bad366227bf633a7c3d85"
+          }
+        }
+      ],
+      "omitted_details": 0
+    },
+    "pair": {
+      "left_citation": {
+        "source": "local-cli-journal.log",
+        "line": 1
+      },
+      "right_citation": {
+        "source": "local-cli-journal.log",
+        "line": 3
+      },
+      "before": {
+        "relation": "left-before-right",
+        "left": {
+          "status": "event",
+          "line_sha256": "fc894d2d564ccaaae05dcfbe97bcdfad64bb648fc80fde16dd48b3bfc5efb39f",
+          "start_utc": "2026-10-18T22:23:30.302086Z",
+          "end_utc_exclusive": "2026-10-18T22:23:30.302087Z"
+        },
+        "right": {
+          "status": "event",
+          "line_sha256": "5f69488771acd893081c9d6687d830e812417c1e3e35cbce1683cfc4dac7f4aa",
+          "start_utc": "2026-10-18T22:23:30.371861Z",
+          "end_utc_exclusive": "2026-10-18T22:23:30.371862Z"
+        }
+      },
+      "after": {
+        "relation": "unresolved-overlap",
+        "left": {
+          "status": "event",
+          "line_sha256": "fc894d2d564ccaaae05dcfbe97bcdfad64bb648fc80fde16dd48b3bfc5efb39f",
+          "start_utc": "2026-10-18T22:23:29.552086Z",
+          "end_utc_exclusive": "2026-10-18T22:23:31.052087Z"
+        },
+        "right": {
+          "status": "event",
+          "line_sha256": "5f69488771acd893081c9d6687d830e812417c1e3e35cbce1683cfc4dac7f4aa",
+          "start_utc": "2026-10-18T22:23:29.621861Z",
+          "end_utc_exclusive": "2026-10-18T22:23:31.121862Z"
+        }
+      },
+      "same_line_evidence": true,
+      "assessment": "relation-changed"
+    },
+    "interpretation": "Citations are physical source and line positions. Identical line hashes bind text at those positions, not event identity after line movement. Order is temporal under each asserted clock bound, not causality or measured skew. Verified packs establish internal consistency; authentic evidence requires independently trusted digests."
+  },
+  "unicode": {
+    "schema_version": 1,
+    "tool": "unicode-delta",
+    "tool_version": "1.0.0",
+    "sources": {
+      "before": {
+        "label": "local-cli-journal.log (before)",
+        "sha256": "c279899161da7647b2fb04e47ffddd1c58ff32b7dc4f37d5fb295508489096d1",
+        "bytes": 344,
+        "finding_count": 0
+      },
+      "after": {
+        "label": "local-cli-journal.log (after)",
+        "sha256": "c279899161da7647b2fb04e47ffddd1c58ff32b7dc4f37d5fb295508489096d1",
+        "bytes": 344,
+        "finding_count": 0
+      }
+    },
+    "unicode_version": "15.0.0",
+    "engines": {
+      "scanner": {
+        "tool": "unicode-lantern",
+        "version": "1.0.0",
+        "source_sha256": "e50d1fb77bd6cfd723c2dbd3749bedf2034c96ea3a2eaf88e4beac4610f6e2f5"
+      },
+      "evidence": {
+        "tool": "unicode-text-window",
+        "version": "1",
+        "source_sha256": "5cce4371e455952c3485c13ee9ed9d49f61c9623b60327fc6471d8b3600cd225"
+      }
+    },
+    "counts": {
+      "before": 0,
+      "after": 0,
+      "added": 0,
+      "removed": 0,
+      "persisting": 0
+    },
+    "comparison_complete": true,
+    "max_changes": 10,
+    "retained_details": 0,
+    "omitted_details": 0,
+    "details_truncated": false,
+    "changes": [],
+    "assessment": "no-added-covered-findings",
+    "coordinates": {
+      "ranges": "zero-based half-open original byte offsets",
+      "line_and_byte_column": "one-based; only LF starts a line",
+      "finding_index": "one-based scanner order, separately in each input"
+    },
+    "matching": "Exact rule, implicated spelling, semantic data and first witness spelling; first-to-first multiset pairing, excluding positions and context.",
+    "detail_order": "Added in after order, removed in before order, persisting in after order.",
+    "limitations": [
+      "Heuristic triage, not proof of deception or absence of deception.",
+      "This is occurrence comparison, not edit tracking or a contextual safety verdict.",
+      "Moved or context-changed occurrences with identical signatures persist.",
+      "Reordering identifiers can change the first collision witness and reported statuses.",
+      "Each file is scanned independently; no cross-file collision detection.",
+      "Limited Latin/Greek/Cyrillic mapping, not full Unicode confusables.",
+      "Not a language parser; identifiers in comments and strings also count.",
+      "Raw UTF-8 only; literal backslash escapes are not decoded as JSON or source code.",
+      "Byte evidence is unredacted and may split UTF-8 characters.",
+      "Excerpts contain at most 16 context bytes per side and 64 implicated bytes.",
+      "Semantic previews may be cut inside an escape; do not parse them as complete escapes.",
+      "Hashes identify bytes, not authorship or authenticity; matching uses exact values, not hashes.",
+      "A detail limit omits evidence objects but never changes the complete counts."
+    ]
+  },
+  "joint_observation": {
+    "selected_source_bytes_changed": false,
+    "selected_source_timeline_line_changes": 8,
+    "selected_source_line_change_count_is_capped": false,
+    "added_covered_unicode_findings": 0,
+    "cited_pair_assessment": "relation-changed",
+    "cited_pair_relation_before": "left-before-right",
+    "cited_pair_relation_after": "unresolved-overlap"
+  },
+  "limits": [
+    "Timeline citations are physical line positions; moved lines are not tracked as the same event.",
+    "Time intervals depend on supplied timestamp precision and asserted clock bounds.",
+    "Unicode findings are heuristic, limited to the bundled scanner, and do not establish deception.",
+    "The two reviews share exact source bytes but neither establishes provenance, completeness or causality.",
+    "The selected Unicode source must be present in both packs and strict UTF-8.",
+    "Evidence excerpts are unredacted; review only sources whose text may be disclosed.",
+    "The 750 ms bound is illustrative, not a measured skew; timestamp coverage is not process runtime or service availability."
+  ],
+  "evidence_kind": "Prior gathering actual local process-observation journal; same bytes under two asserted clock models."
+}

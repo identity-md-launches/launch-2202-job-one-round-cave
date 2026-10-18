@@ -8,6 +8,9 @@ import sys
 
 ROOT = Path(__file__).resolve().parent.parent
 CASES = [
+ ('shared timeline and Unicode change review', ['shared/timeline-text-delta/timeline_text_delta.py', 'demo'], 0),
+ ('whole-cluster exact verdict', ['line-1/tools/cluster-verdict/cluster_verdict.py', '--demo'], 0),
+ ('Unicode finding delta', ['line-2/tools/unicode-delta/unicode_delta.py', '--demo'], 0),
  ('shared gap budget declared failure', ['shared/gap-budget/gap_budget.py', 'demo'], 1),
  ('observed CLI journal coverage', ['gathering/try_gap_budget.py'], 0),
  ('worksheet passing exact chain', ['line-4/tools/worksheet-flint/worksheet_flint.py', 'check'], 0, json.dumps({'schema':'worksheet-flint/1','steps':[{'name':'distance','expression':'10 km'},{'name':'duration','expression':'2 h'},{'name':'speed','expression':'$distance / $duration','to':'m/s','expect':'5 km/h','at_least':'1 m/s','at_most':'2 m/s'}]})),

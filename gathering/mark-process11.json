@@ -1,0 +1,25 @@
+{
+  "method": "Generated pigment transferred selectively to ancestral wall; all decoded pixels outside this mask are identical to Gathering 10.",
+  "image_tool": "image_gen.imagegen",
+  "ancestor": "artifacts/gathering/wall-v10.png",
+  "ancestor_sha256": "d1b20a4154c317481a8f3b4094af0198e11d18f7d5162c32610db160fb80415f",
+  "generated_donor_sha256": "2e6d079e801bdbf2d957e5f8e276e777d17abcde09eaa3855999defe6dfcb0da",
+  "destination_box": [
+    160,
+    970,
+    345,
+    1071
+  ],
+  "changed_pixels": 4463,
+  "pigment_pixels": {
+    "charcoal": 2263,
+    "ochre": 1278,
+    "chalk": 922
+  },
+  "changed_bounds": [
+    170,
+    977,
+    330,
+    1061
+  ]
+}

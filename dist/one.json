@@ -1,6 +1,6 @@
 {
   "name": "One",
-  "image": "https://api.imd.fun/artifacts/d1b20a4154c317481a8f3b4094af0198e11d18f7d5162c32610db160fb80415f",
+  "image": "https://api.imd.fun/artifacts/8c3c480ea51201f637568338832c10a366bec31b85c271d97d8155aff9d18b04",
   "attributes": [
     {
       "trait_type": "Cave",
@@ -16,7 +16,7 @@
     },
     {
       "trait_type": "Meaning",
-      "value": "Broken chalk trails cradle an ochre pebble where evidence leaves a gap."
+      "value": "A changed trail is rechecked for hidden marks and uncertain order."
     }
   ]
 }

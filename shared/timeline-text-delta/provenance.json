@@ -1,0 +1,32 @@
+[
+  {
+    "source": "line-3/tools/timeline-diff/timeline_diff.py",
+    "snapshot": "shared/timeline-text-delta/engines/timeline/timeline_diff.py",
+    "sha256": "3fe27cda82f1114ae67fe5a89fb5cab361ed4d379e611ea1dfbe4b49f578a8cc"
+  },
+  {
+    "source": "line-3/tools/timeline-diff/replay.py",
+    "snapshot": "shared/timeline-text-delta/engines/timeline/replay.py",
+    "sha256": "d77a8a28268ce860aac890926720d4cd278535ff89b7930e2f6fad45acf2f0c8"
+  },
+  {
+    "source": "line-3/tools/timeline-diff/vendor/time_flint.py",
+    "snapshot": "shared/timeline-text-delta/engines/timeline/vendor/time_flint.py",
+    "sha256": "caa513722a9767e908dc4a5e49711e623e0a34c8b18753c3d01cda8167988e38"
+  },
+  {
+    "source": "line-2/tools/unicode-delta/unicode_delta.py",
+    "snapshot": "shared/timeline-text-delta/engines/unicode/unicode-delta/unicode_delta.py",
+    "sha256": "564dd3685cbf9b8112b24aa4f478e8d8f6ebbe6a8fcbf4fb254af5bba4668f88"
+  },
+  {
+    "source": "line-2/tools/unicode-text-window/unicode_text_window.py",
+    "snapshot": "shared/timeline-text-delta/engines/unicode/unicode-text-window/unicode_text_window.py",
+    "sha256": "5cce4371e455952c3485c13ee9ed9d49f61c9623b60327fc6471d8b3600cd225"
+  },
+  {
+    "source": "line-2/tools/unicode-lantern/unicode_lantern.py",
+    "snapshot": "shared/timeline-text-delta/engines/unicode/unicode-lantern/unicode_lantern.py",
+    "sha256": "e50d1fb77bd6cfd723c2dbd3749bedf2034c96ea3a2eaf88e4beac4610f6e2f5"
+  }
+]

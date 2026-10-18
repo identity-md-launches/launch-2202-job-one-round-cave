@@ -1,31 +1,25 @@
-# The Counted Silence — tenth gathering
+# The Unhidden Shift — eleventh gathering
 
-[Gap Budget](../shared/gap-budget/README.md) connects Line 3's fully replayed
-timestamp coverage to Line 4's exact calculation worksheets. Copy its whole
-folder for standalone offline use with Python 3.10+ and the standard library.
-
-```sh
-python3 -B shared/gap-budget/gap_budget.py demo
-```
-
-The demo **deliberately exits 1**: three uncovered seconds exceed a 2.5-second
-budget, while the one-second longest gap meets its inclusive budget. Its exact
-uncovered fraction is 1/2. Coverage gaps do not prove downtime or missing
-collection; changing asserted clock uncertainty can remove gaps.
+[Timeline Text Delta](../shared/timeline-text-delta/README.md) connects Line 3's
+replayed incident timeline comparison with Line 2's original-byte Unicode
+finding comparison over the same embedded log source. Copy its whole folder for
+standalone Python 3.10+ standard-library use.
 
 ```sh
-python3 -B gathering/try_gap_budget.py
+python3 -B shared/timeline-text-delta/timeline_text_delta.py demo
 ```
 
-This executes four actual local CLIs, journals their observed timestamps and
-replays that evidence. One retained run is in `observed-gap-budget.json`.
-Sparse journal coverage is not process runtime or service availability.
-The tool payload demos remain synthetic and the example budgets are post hoc.
+The synthetic demo changes one log line and adds a right-to-left override. It
+reports the changed line, both temporal relations and the covered Unicode
+finding's byte citation. An actual prior local CLI journal was separately
+reviewed under two asserted clock bounds in
+`observed-timeline-text-review.json`; its log bytes and Unicode findings did not
+change, while the cited pair lost definite order. That journal is process
+observation, not an external incident; the wider bound is illustrative.
 
-[REPORT.md](REPORT.md) covers every line: **32 tools, 552 passing tests and 66
-CLI exercises with expected statuses**, limits, distinct external usefulness and
-suggested scope for a 21-Pepe goal. No check failure remains. Line folders and
-line records stayed unchanged. [COINS.md](COINS.md) says none and explains why.
+[REPORT.md](REPORT.md) covers all four lines, including what was tried, observed
+behavior, limits, external usefulness and narrowing for a 21-step finish.
+[COINS.md](COINS.md) says none and explains why. No line folder changed.
 
 ```sh
 python3 -B gathering/check_tools.py
@@ -34,29 +28,27 @@ python3 -B gathering/verify.py
 python3 -B gathering/check_gallery.py
 ```
 
-Wall: `artifacts/gathering/wall-v10.png`, **1254 × 1254 RGB8 PNG**, untracked for
-separate upload; `wall.png` is its relative alias. Preview:
-`dist/gathering/10.jpg`, **512 × 512 baseline JPEG, 97,979 bytes**. Record `10.json`
-and rewritten `one.json` use the full PNG's SHA-256. One retains number 736.
-The gallery has all 138 numbered records, by wall, newest painted first; goals
-copy the four unchanged GOAL.md files. Earlier records and placeholders remain.
+The current wall is `artifacts/gathering/wall-v11.png`, a 1254 × 1254 RGB8 PNG;
+`wall.png` is its relative alias. The 512 × 512 baseline JPEG preview is
+`dist/gathering/11.jpg` (98,161 bytes). Record `11.json` and rewritten
+`dist/one.json` use the full PNG SHA-256. `dist/goals.json` copies the four goals;
+`dist/index.html` is a self-contained gallery with all 140 numbered records.
+Earlier painted records and future placeholders remain.
 
-Built-in imagegen supplied chalk trails and an ochre pebble. Only its pigment
-was composited onto the original wall: **1,160 pixels changed** inside
-`[928,1128,1023,1194)`; every other decoded pixel matches Gathering 09. Both
-inherited hands retain five digits. No new hands or text. Full PNG and JPEG
-were visually inspected; **no unmet visual requirements observed**. The small
-motif is subtle at preview scale; there is no independent artistic approval.
-[image-prompt.txt](image-prompt.txt) records the prompt and accepted placement
-change. `add_mark10.js` is a processing record requiring the original donor,
-not a command to rerun on the final wall.
+Built-in imagegen supplied the new charcoal, ochre and chalk pigment. Only 4,463
+selected pixels inside lower-left bare rock were transferred onto the exact
+previous wall; all other decoded pixels are identical to Gathering 10. Both
+inherited hands retain five digits. Full PNG and JPEG were visually inspected;
+no unmet visual requirement was observed. The new mark is small at preview scale
+and has no independent artistic approval. `mark-process11.json`,
+`wall-review.json` and `validation.json` record the checks. The generated donor
+was a temporary process file and is not needed to use the final wall.
 
 ```sh
-python3 -B gathering/make_preview.py artifacts/gathering/wall-v10.png dist/gathering/10.jpg
+python3 -B gathering/make_preview.py artifacts/gathering/wall-v11.png dist/gathering/11.jpg
 python3 -B gathering/build_dist.py
 ```
 
-No dependency installation or network is needed for the delivered Python tools
-or gallery builder. All shared engine snapshots are ordinary files with source
-paths and digests. Structural checks establish bytes and paths, not scientific
-validity, browser rendering or independent visual approval.
+No package installation or network is needed for the tools or gallery. The
+structural checks establish paths and bytes, not scientific validity, browser
+rendering or independent visual approval.
