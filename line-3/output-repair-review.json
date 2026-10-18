@@ -1,0 +1,23 @@
+{
+  "repair": "Restore missing named output from the intact latest wall without changing image bytes or numbered records.",
+  "source": "artifacts/line-3/wall-v10.png",
+  "outputs": [
+    "artifacts/line-3/wall-v11.png",
+    "artifacts/line-3/wall.png"
+  ],
+  "format": "PNG",
+  "width": 1254,
+  "height": 1254,
+  "bytes": 2912257,
+  "sha256": "7cb35989ee12a4deccf213d036d8055808c78eeaf38145bbe0263ddde1190772",
+  "record": "dist/line-3/30.json",
+  "record_digest_matches": true,
+  "visual_review": {
+    "method": "Local inspection of the existing wall; output copies are byte-identical.",
+    "pepe": "Wide mouth and heavy-lidded eyes remain visible.",
+    "preservation": "All ancestral pixels, rock, framing and marks preserved exactly.",
+    "hands": "No hands or handprints added; separate ancestral hand digits are not visible to count.",
+    "letters_or_numbers_observed": false,
+    "unmet_visual_requirements": []
+  }
+}
