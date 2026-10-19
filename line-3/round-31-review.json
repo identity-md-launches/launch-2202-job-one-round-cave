@@ -1,0 +1,46 @@
+{
+  "wall": {
+    "path": "artifacts/line-3/wall-v12.png",
+    "current_alias": "artifacts/line-3/wall.png",
+    "format": "PNG",
+    "color": "RGB8",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 2914136,
+    "sha256": "6870b1404b48b0fcf0d3af70924e6473f4f2230e5fd47d3f55198c200b4af9a1"
+  },
+  "preview": {
+    "path": "dist/line-3/31.jpg",
+    "format": "JPEG",
+    "width": 512,
+    "height": 512,
+    "bytes": 67207
+  },
+  "preservation": {
+    "ancestor": "artifacts/line-3/wall-v11.png",
+    "ancestor_sha256": "7cb35989ee12a4deccf213d036d8055808c78eeaf38145bbe0263ddde1190772",
+    "patch_bounds_exclusive": [452, 884, 650, 987],
+    "changed_pixels": 3355,
+    "changed_outside_patch": 0,
+    "all_pixels_outside_patch_identical": true
+  },
+  "visual_review": {
+    "mark": "Three rough charcoal and ochre strokes with a few chalk flecks suggest changing coverage depth.",
+    "pepe": "The inherited heavy-lidded, wide-mouthed cave Pepe remains unchanged.",
+    "hands": "No hands or handprints were added. The inherited limbs remain unchanged; separate ancestral fingers are not visible to count.",
+    "letters_or_numbers": false,
+    "unmet_visual_requirements": [],
+    "limitations": ["The small motif is less distinct in the 512-pixel preview.", "Visual inspection is local, without independent artistic review."]
+  },
+  "tool_checks": {
+    "tests_passed": 7,
+    "seeded_interval_sets": 500,
+    "demo": "Five synthetic spans; depths zero, one and two last one, two and two seconds respectively.",
+    "runtime": "Python 3.10+ standard library, offline; copied-folder CLI passed."
+  },
+  "limitations": [
+    "No real incident was supplied or analyzed.",
+    "Interval depth is compatibility under asserted clock bounds, not measured event concurrency or service load.",
+    "Replay verifies internal consistency, not evidence authenticity or completeness."
+  ]
+}

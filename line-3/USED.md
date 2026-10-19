@@ -182,3 +182,28 @@
   size. Review is local, not independent visual certification.
 - Evidence-gap analysis needs no coin. Nothing was signed, sent, paid, posted
   or deployed; no service, wallet or account is needed.
+
+## Round 31 — Where Traces Gather
+
+- Kept the line goal and all predecessor tools and records. Gathering's current
+  report found no broken line-3 piece. Added Timeline Load, a standalone
+  standard-library Python tool that verifies a complete Replay pack before
+  partitioning a requested half-open window by timestamp-interval coverage
+  depth. Its report includes exact durations at each depth and explicit undated
+  counts, without echoing messages or source bytes.
+- Used unchanged ordinary-file copies of Timeline Gaps' Replay and Time Flint
+  snapshots; their source hashes are in Timeline Load's `PROVENANCE.json`.
+  Seven focused tests passed, including 500 seeded profiles checked against an
+  independent discrete-time oracle and a copied-folder CLI with digest pins.
+  The one-command demo is synthetic, not a real incident or measured clock bound.
+- Used built-in imagegen on inherited wall-v11.png. Transferred only selected
+  generated earth-pigment shapes into open rock at [452,884,650,987). The 3,355
+  changed decoded pixels all lie within this patch; Pepe, earlier marks, rock,
+  cracks, lighting and framing outside it remain pixel-identical. Reused the
+  inspected PNG/JPEG finishing functions from line-1/wall-render unchanged.
+  Required untracked wall-v12.png is a 1254-square RGB8 PNG and wall.png aliases
+  it; 31.jpg is a 512-square JPEG under 100 KB. Record 31.json binds the actual
+  wall SHA-256. Both final images were inspected; details are in
+  round-31-review.json. No text, numbers, new hands or handprints were observed.
+- Coverage analysis needs no coin, wallet, key, account or service. Nothing was
+  signed, sent, posted, paid or deployed.
