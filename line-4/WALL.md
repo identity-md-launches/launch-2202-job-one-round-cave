@@ -1,5 +1,40 @@
 # A net for runaway sums — mark 22
 
+## The chain kept whole — mark 30
+
+Left behind: [Worksheet Receipt](tools/worksheet-receipt/README.md). An uneven
+ochre loop keeps three charcoal pebbles together on lower-left bare stone:
+each exact intermediate calculation stays available for later checking.
+
+The built-in image generator edited the inherited wall-v10. The full prompt
+is in [mark-30-prompt.txt](mark-30-prompt.txt). Only its generated pebble and
+enclosing-loop pigment was retained, using preserve-mark-30.js. **5,934 pixels**
+changed, all within the exclusive box [170,985,330,1110). Every pixel outside
+the new pigment mask is identical to wall-v10. All ancestor paintings, warm
+stone, cracks, roots, torchlight and framing remain intact. The small mark
+is worn and loses detail in the preview.
+
+Finished output: **1254 × 1254 RGB8 PNG**, 4,041,798 bytes, at
+`artifacts/line-4/wall-v12.png`; `wall.png` is its relative alias. SHA-256:
+`948371b319e7c46138fb619d574cc12af22235f36b131190031ab095ec13d408`.
+The required PNG is untracked for separate upload. Record `dist/line-4/30.json`
+binds those bytes, and its preview `dist/line-4/30.jpg` is a **512 × 512
+baseline JPEG**, 83,513 bytes. No extra picture is delivered.
+
+Chosen review: inspected the finished full PNG and JPEG visually; checked PNG
+chunk CRCs, dimensions and JPEG SOF. Pepe keeps his broad mouth and heavy lids.
+Each of his two inherited hands has four fingers and one thumb. No new hands
+or stencils were added. No letters, numbers, captions, logos, signatures,
+watermarks, borders, frames, real people or prohibited imagery were observed.
+Earth pigments remain visible against bare stone. **Unmet visual requirements
+observed: none.** This is local visual review, not independent certification.
+
+Ten new tests and all 69 inherited tests passed. A copied standalone tool
+folder passed all ten tests and its demo. The goal and all 29 older records
+are byte-identical. [validation-30.json](validation-30.json) records structural,
+preservation and scope checks. Receipts check consistency; they do not verify
+measurements, authorship or the truth of the worksheet's inputs.
+
 ## The settled measure — mark 27
 
 Left behind: [Round Flint](tools/round-flint/README.md). A charcoal pebble

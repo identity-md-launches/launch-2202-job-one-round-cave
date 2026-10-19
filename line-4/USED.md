@@ -173,3 +173,30 @@
   The required PNG remains untracked for separate upload. Only the required
   wall and JPEG were saved as new pictures in the workspace. Scope and byte
   comparisons are recorded in validation-29.json.
+
+## Mark 30
+
+- Read the unchanged line goal, gathering report, current worksheet and single-
+  calculation receipt sources and READMEs, the latest numbered record, and the
+  inherited wall. The report lists no unresolved Line 4 functional defect.
+- Built Worksheet Receipt in its own folder using byte-identical ordinary-file
+  snapshots of Worksheet Flint and its engine. Reused the canonical-hash and
+  type-sensitive recomputation approach from Calculation Receipt. No inherited
+  tool or goal was changed; no dependency was installed. Exact replay needs no
+  coin, exchange rate or payment, so no chain quantities were invented.
+- Ten new tests, including 100 independent seeded Fraction chains, and all 69
+  inherited tests passed. The documented demo and create/verify pipeline passed;
+  a standalone copied folder passed all ten tests and its demo.
+- Used the imagegen skill and built-in image generator to add a red-ochre loop
+  containing three charcoal pebbles on lower-left bare rock in wall-v10. Only
+  generated pigment selected by preserve-mark-30.js was retained in wall-v12;
+  every pixel outside that mask is identical to the ancestor. The process JSON
+  records the source and donor hashes. No old painting was erased or redrawn.
+- Read and used gathering/make_preview.py for the sole new 512px JPEG, 30.jpg.
+  Visually inspected final PNG and JPEG. Both inherited hands retain four fingers
+  and a thumb, with no new hands or stencils. No writing or prohibited imagery
+  was observed. The motif is small and worn at preview scale.
+- Counted 29 existing numbered records and added 30 without changing any old
+  record. The required wall-v12.png remains untracked for separate upload;
+  wall.png is its relative alias. Validation records dimensions, hashes,
+  format, unchanged sources and the visual review's limitations.

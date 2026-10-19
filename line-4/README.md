@@ -89,3 +89,15 @@ python3 -B line-4/tools/worksheet-flint/worksheet_flint.py demo
 The supplied example computes 62.5 seconds for a transfer and 64 seconds with
 overhead; the 60-second limit fails. The full worksheet is checked before any
 output, with explicit dimensions, direct dependencies and per-step checks.
+
+Mark 30 adds [Worksheet Receipt](tools/worksheet-receipt/README.md), which keeps
+an entire exact worksheet and recomputes its intermediate quantities, dimensions,
+dependencies and claims later. A verified receipt can still contain a failed
+claim; its exit status preserves that distinction. Try:
+
+```sh
+python3 -B line-4/tools/worksheet-receipt/worksheet_receipt.py demo
+```
+
+The offline demo replays passing and failed budgets and rejects a rehashed
+altered intermediate. Receipts establish consistency, not input truth or authorship.

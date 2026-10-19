@@ -1,0 +1,62 @@
+{
+  "number": 30,
+  "goal_byte_identical": true,
+  "older_numbered_records_byte_identical": 29,
+  "inherited_source_files_byte_identical": 18,
+  "checks": {
+    "new_tests_passed": 10,
+    "independent_fraction_chains": 100,
+    "inherited_tests_passed": 69,
+    "documented_demo_exit": 0,
+    "documented_create_verify_pipeline_exit": 0,
+    "standalone_folder_tests_passed": 10,
+    "standalone_demo_exit": 0
+  },
+  "wall": {
+    "path": "artifacts/line-4/wall-v12.png",
+    "format": "PNG",
+    "mode": "RGB8",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 4041798,
+    "sha256": "948371b319e7c46138fb619d574cc12af22235f36b131190031ab095ec13d408",
+    "ancestor": "artifacts/line-4/wall-v10.png",
+    "changed_pixels": 5934,
+    "changed_bbox_xyxy_inclusive": [
+      172,
+      993,
+      326,
+      1103
+    ],
+    "outside_added_mask_changed_pixels": 0,
+    "untracked_for_uploader": true
+  },
+  "preview": {
+    "path": "dist/line-4/30.jpg",
+    "format": "baseline JPEG",
+    "width": 512,
+    "height": 512,
+    "bytes": 83513,
+    "dimensions_verified_from_sof": true
+  },
+  "record": {
+    "path": "dist/line-4/30.json",
+    "shape_and_image_hash_valid": true
+  },
+  "visual_review": {
+    "method": "Final full PNG and JPEG visually inspected; PNG CRCs and JPEG SOF checked locally",
+    "inherited_five_digit_hands": 2,
+    "new_hands_or_stencils": 0,
+    "ancestral_pepe_and_marks_preserved": true,
+    "writing_or_prohibited_imagery_observed": false,
+    "unmet_visual_requirements": []
+  },
+  "scope_check_passed": true,
+  "new_non_artifact_files_under_100000_bytes": true,
+  "limits": [
+    "Receipts are unsigned consistency checks, not authentication or measurement validation.",
+    "A correctly recomputed replacement request can produce a valid new receipt.",
+    "The small worn motif loses detail at preview size.",
+    "Tests and visual review are local observations, not independent certification."
+  ]
+}
