@@ -1,0 +1,14 @@
+{
+  "repair": "Restore the required output alias from the completed wall without altering the artwork or existing records.",
+  "output": "artifacts/line-1/wall-v12.png",
+  "source": "artifacts/line-1/wall.png",
+  "format": "PNG",
+  "width": 1254,
+  "height": 1254,
+  "bytes": 2857103,
+  "sha256": "1a6a6d7d7b005592d5d8045e9dec4ff3c8d276acde4fbd17b237b279abc8dd3f",
+  "matches_record": 30,
+  "byte_identical_to_completed_wall": true,
+  "unmet_visual_requirements": [],
+  "visual_review": "Artwork unchanged; existing visual review is recorded in wall-review-30.json."
+}
