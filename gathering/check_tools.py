@@ -20,14 +20,17 @@ def main():
         shutil.copyfile(ROOT / "line-3/tools/time-flint" / name, scratch / name)
     before = {str(p.relative_to(ROOT)): hashlib.sha256(p.read_bytes()).hexdigest()
               for n in range(1, 5) for p in (ROOT / f"line-{n}").rglob("*") if p.is_file()}
-    suites = ["line-1/tools/paired-verdict", "line-1/tools/candidate-ladder",
-              "line-1/tools/paired-power", "line-1/tools/frozen-benchmark", "line-1/tools/cluster-verdict", "line-2/tools/unicode-lantern",
-              "line-2/tools/json-lantern", "line-2/tools/json-citations", "test/scratch/time-flint", "line-3/tools/timeline-replay",
-              "line-3/tools/order-witness", "line-4/tools/unit-flint", "line-2/tools/unicode-replay", "line-3/tools/clock-margin", "line-4/tools/calculation-receipt", "line-1/tools/benchmark-seal", "line-2/tools/unicode-seal", "line-3/tools/timeline-diff", "line-4/tools/interval-flint", "line-1/tools/evidence-receipt", "line-2/tools/unicode-window", "line-3/tools/timeline-window", "line-1/tools/policy-benchmark", "line-2/tools/unicode-text-window", "line-4/tools/round-flint", "line-1/tools/case-influence", "line-2/tools/unicode-crosscheck", "line-3/tools/timeline-peaks", "line-4/tools/tolerance-flint", "line-1/tools/cluster-influence", "line-2/tools/json-crosscheck", "line-2/tools/unicode-delta", "line-3/tools/timeline-gaps", "line-4/tools/worksheet-flint", "gathering", "shared/reviewed-timeline", "shared/replay-review", "shared/clock-receipt", "shared/interval-clock", "shared/window-review", "shared/benchmark-display", "shared/effect-band", "shared/gap-budget", "shared/timeline-text-delta"]
+    suites = sorted(str(p) for n in range(1, 5)
+                    for p in Path(f"line-{n}/tools").iterdir()
+                    if p.is_dir() and any(p.glob("test_*.py")))
+    suites = ["test/scratch/time-flint" if x == "line-3/tools/time-flint" else x
+              for x in suites]
+    suites += ["gathering"] + sorted(str(p) for p in Path("shared").iterdir()
+                                    if p.is_dir() and any(p.glob("test_*.py")))
     checks = []
     for suite in suites:
         command = [sys.executable, "-B", "gathering/run_suite.py", "discover", "-s", suite, "-v"]
-        run = subprocess.run(command, cwd=ROOT, capture_output=True, text=True)
+        run = subprocess.run(command, cwd=ROOT, capture_output=True, text=True, timeout=120)
         match = re.search(r"Ran (\d+) tests?", run.stderr)
         (ROOT / "test/scratch" / (suite.replace("/", "_") + ".log")).write_text(run.stdout + run.stderr)
         checks.append({"suite": suite, "tests": int(match[1]) if match else 0,

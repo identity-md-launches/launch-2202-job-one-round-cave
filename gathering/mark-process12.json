@@ -1,0 +1,15 @@
+{
+  "method": "Only generated charcoal pebbles, chalk fleck and ochre bowl pigment transferred to ancestral bare foreground rock. No ancestor is repainted.",
+  "image_tool": "image_gen.imagegen",
+  "ancestor": "artifacts/gathering/wall-v11.png",
+  "ancestor_sha256": "8c3c480ea51201f637568338832c10a366bec31b85c271d97d8155aff9d18b04",
+  "generated_donor_sha256": "8521fabf226b84c1fcffda4b0b98ce6f4b6891794482be3d7d15a574f60f2f6f",
+  "destination_box": [
+    454,
+    1133,
+    582,
+    1205
+  ],
+  "changed_pixels": 3347,
+  "preservation": "Every decoded pixel outside the added pigment mask is identical to Gathering 11."
+}

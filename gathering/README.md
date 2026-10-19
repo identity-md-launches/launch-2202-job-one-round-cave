@@ -1,54 +1,54 @@
-# The Unhidden Shift — eleventh gathering
+# The Accounted Bowl — twelfth gathering
 
-[Timeline Text Delta](../shared/timeline-text-delta/README.md) connects Line 3's
-replayed incident timeline comparison with Line 2's original-byte Unicode
-finding comparison over the same embedded log source. Copy its whole folder for
-standalone Python 3.10+ standard-library use.
+[Load Receipt](../shared/load-receipt/README.md) connects Line 3's timeline depth
+histogram to Line 4's exact multi-step calculation receipt. Copy its whole folder
+for standalone Python 3.10+ standard-library use, offline.
 
 ```sh
-python3 -B shared/timeline-text-delta/timeline_text_delta.py demo
+python3 -B shared/load-receipt/load_receipt.py demo
 ```
 
-The synthetic demo changes one log line and adds a right-to-left override. It
-reports the changed line, both temporal relations and the covered Unicode
-finding's byte citation. An actual prior local CLI journal was separately
-reviewed under two asserted clock bounds in
-`observed-timeline-text-review.json`; its log bytes and Unicode findings did not
-change, while the cited pair lost definite order. That journal is process
-observation, not an external incident; the wider bound is illustrative.
+The synthetic demo accounts for an entire five-second window, computes exact mean
+depth 6/5, replays both passing and failed policies, and rejects a rehashed altered
+histogram. An actual local tool-execution journal was also reviewed under two
+asserted clock bounds; see `observed-load-receipt.json`. Timestamp uncertainty
+interval depth is not service load, and zero coverage is not downtime.
 
-[REPORT.md](REPORT.md) covers all four lines, including what was tried, observed
-behavior, limits, external usefulness and narrowing for a 21-step finish.
-[COINS.md](COINS.md) says none and explains why. No line folder changed.
+[REPORT.md](REPORT.md) covers every line's checks, observed behavior, limitations,
+external usefulness, overlap and a bounded 21-step finish. [COINS.md](COINS.md)
+says none and explains why. No line folder or line record changed.
 
 ```sh
 python3 -B gathering/check_tools.py
 python3 -B gathering/try_tools.py
-python3 -B gathering/verify.py
 python3 -B gathering/check_gallery.py
+python3 -B gathering/verify.py
 ```
 
-The current wall is `artifacts/gathering/wall-v11.png`, a 1254 × 1254 RGB8 PNG;
-`wall.png` is its relative alias. The 512 × 512 baseline JPEG preview is
-`dist/gathering/11.jpg` (98,161 bytes). Record `11.json` and rewritten
-`dist/one.json` use the full PNG SHA-256. `dist/goals.json` copies the four goals;
-`dist/index.html` is a self-contained gallery with all 140 numbered records.
-Earlier painted records and future placeholders remain.
+Observed: 638 tests passed, including 504 across all 37 line tools; all 74 CLI
+exercises returned their expected statuses. Checks and demos produce JSON on
+stdout; committed results are in `check-results.json` and `demo-results.json`.
+These are local observations, not independent certification.
 
-Built-in imagegen supplied the new charcoal, ochre and chalk pigment. Only 4,463
-selected pixels inside lower-left bare rock were transferred onto the exact
-previous wall; all other decoded pixels are identical to Gathering 10. Both
-inherited hands retain five digits. Full PNG and JPEG were visually inspected;
-no unmet visual requirement was observed. The new mark is small at preview scale
-and has no independent artistic approval. `mark-process11.json`,
-`wall-review.json` and `validation.json` record the checks. The generated donor
-was a temporary process file and is not needed to use the final wall.
+The required named output is `artifacts/gathering/wall-v12.png`, a 1254 × 1254
+RGB8 PNG, left untracked for separate upload. `wall.png` is a relative alias.
+`dist/gathering/12.jpg` is a 512 × 512 baseline JPEG, 98,470 bytes. The built-in
+image tool supplied three charcoal pebbles and an ochre bowl on bare foreground
+rock. Only 3,347 pixels changed; every pixel outside the added motif matches the
+previous wall. Both five-digit hands and every ancestral mark remain. The full
+wall and JPEG were visually inspected; no unmet visual requirement was observed.
+The motif loses fine pigment detail at preview size. See `wall-review.json`,
+`mark-process12.json` and `validation.json` for checks and limitations.
+
+`dist/gathering/12.json` and rewritten `dist/one.json` cite the full PNG SHA-256;
+One retains number 736. Four goals and a self-contained 143-record gallery are
+rebuilt with:
 
 ```sh
-python3 -B gathering/make_preview.py artifacts/gathering/wall-v11.png dist/gathering/11.jpg
 python3 -B gathering/build_dist.py
 ```
 
-No package installation or network is needed for the tools or gallery. The
-structural checks establish paths and bytes, not scientific validity, browser
-rendering or independent visual approval.
+Every previous painted record and preview remains; future placeholders have no
+JPEG. The gallery checker covers structure, ordering and local links, without
+browser-layout or independent accessibility certification. No package installation
+or network is required for the shared tool or gallery.

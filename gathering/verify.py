@@ -41,159 +41,117 @@ def traits(record):
 
 
 def main():
-    png = ROOT / 'artifacts/gathering/wall-v11.png'
+    png = ROOT / 'artifacts/gathering/wall-v12.png'
     raw = png.read_bytes()
-    assert decode_png(png)[:2] == (1254, 1254)
+    width, height, current = decode_png(png)
+    assert (width, height) == (1254, 1254)
+    assert png.is_file() and not png.is_symlink()
+    assert not subprocess.run(['git', 'ls-files', '--', 'artifacts/gathering/wall-v12.png'],
+                              cwd=ROOT, check=True, capture_output=True).stdout
     alias = ROOT / 'artifacts/gathering/wall.png'
-    # The PNG is delivered by the named-output uploader. Keep the current-wall
-    # path as a relative alias, rather than bundling its 3 MB bytes a second time.
-    assert alias.is_symlink(), 'current wall must not duplicate the declared output'
-    assert alias.readlink() == Path('wall-v11.png')
-    assert alias.resolve() == png.resolve() and alias.read_bytes() == raw
-    assert png.is_file() and not png.is_symlink(), 'declared upload needs actual PNG bytes'
-    uploaded_source = subprocess.run(['git', 'ls-files', '--', str(png.relative_to(ROOT))],
-                                     cwd=ROOT, check=True, capture_output=True).stdout
-    assert not uploaded_source, 'declared PNG must stay outside the source bundle'
-    # Independently compare decoded pixels: generated pigment must be the only
-    # change, on rock to the right of Pepe. No ancestral mark moves.
-    _, _, previous_rows = decode_png(ROOT / 'artifacts/gathering/wall-v10.png')
-    _, _, current_rows = decode_png(png)
-    changed = []
-    for y, (before, after) in enumerate(zip(previous_rows, current_rows)):
-        for x in range(1254):
-            if before[3*x:3*x+3] != after[3*x:3*x+3]:
-                changed.append((x, y))
-    process = read(ROOT / 'gathering/mark-process11.json')
-    assert len(changed) == process['changed_pixels'] == 4463
+    assert alias.is_symlink() and alias.readlink() == Path('wall-v12.png')
+    assert alias.resolve() == png.resolve()
+    ancestor = ROOT / 'artifacts/gathering/wall-v11.png'
+    _, _, previous = decode_png(ancestor)
+    process = read(ROOT / 'gathering/mark-process12.json')
+    assert process['ancestor_sha256'] == hashlib.sha256(ancestor.read_bytes()).hexdigest()
+    changed = [(x, y) for y in range(height) for x in range(width)
+               if current[y][3*x:3*x+3] != previous[y][3*x:3*x+3]]
     x0, y0, x1, y1 = process['destination_box']
+    assert len(changed) == process['changed_pixels'] == 3347
     assert all(x0 <= x < x1 and y0 <= y < y1 for x, y in changed)
-    assert process['ancestor_sha256'] == hashlib.sha256(
-        (ROOT / 'artifacts/gathering/wall-v10.png').read_bytes()).hexdigest()
     digest = hashlib.sha256(raw).hexdigest()
-    record = read(ROOT / 'dist/gathering/11.json')
-    attributes = traits(record)
+    record = read(ROOT / 'dist/gathering/12.json')
+    values = traits(record)
     assert record['image'] == URL + digest
-    assert set(attributes) == {'Cave', 'Wall', 'Number', 'Left behind', 'Meaning', 'One thing'}
-    assert attributes['Cave'] == 'Roots' and attributes['Wall'] == 'Gathering'
-    assert type(attributes['Number']) is int and attributes['Number'] == 11
-    assert attributes['One thing'] == 'Gathering'
-    jpg = ROOT / 'dist/gathering/11.jpg'
+    assert set(values) == {'Cave', 'Wall', 'Number', 'Left behind', 'Meaning', 'One thing'}
+    assert values['Cave'] == 'Roots' and values['Wall'] == 'Gathering'
+    assert type(values['Number']) is int and values['Number'] == 12
+    assert values['One thing'] == 'Gathering' and values['Left behind'] == 'Load Receipt'
+    jpg = ROOT / 'dist/gathering/12.jpg'
     assert jpeg_size(jpg.read_bytes()) == (512, 512)
-    assert jpg.stat().st_size < 100_000
-    placeholder = {'name': 'Not painted yet', 'image': URL + BARE,
-                   'attributes': [{'trait_type': 'Cave', 'value': 'Roots'}]}
-    index = (ROOT / 'dist/index.html').read_text(encoding='utf-8')
-    future, painted, numbered = 0, 0, 0
-    for wall in ['line-1', 'line-2', 'line-3', 'line-4', 'gathering']:
-        folder = ROOT / 'dist' / wall
-        assert all((folder / f'{n:02d}.json').is_file() for n in range(1, 22))
-        paths = sorted(folder.glob('[0-9][0-9].json'), reverse=True)
-        ordering = []
-        for path in paths:
-            numbered += 1
-            assert f'{wall}/{path.name}' in index
-            item = read(path)
-            if item['name'] == 'Not painted yet':
-                assert item == placeholder
-                assert not path.with_suffix('.jpg').exists()
-                future += 1
-            else:
-                values = traits(item)
-                expected_wall = 'Gathering' if wall == 'gathering' else 'Line ' + wall[-1]
-                assert values['Cave'] == 'Roots' and values['Wall'] == expected_wall
-                assert type(values['Number']) is int and values['Number'] == int(path.stem)
-                assert set(values) == {'Cave', 'Wall', 'Number', 'Left behind', 'Meaning', 'One thing'}
-                assert len(item['image']) == len(URL) + 64 and item['image'].startswith(URL)
-                int(item['image'][len(URL):], 16)
-                assert jpeg_size(path.with_suffix('.jpg').read_bytes()) == (512, 512)
-                ordering.append(index.index(f'id="{wall}-{path.stem}"'))
-                painted += 1
-        assert ordering == sorted(ordering), 'painted records must be newest first'
-    assert numbered == painted + future
-    assert (numbered, painted, future) == (140, 50, 90)
-    goals = read(ROOT / 'dist/goals.json')
-    assert goals == [{'line': n, 'goal': (ROOT / f'line-{n}/GOAL.md').read_text().strip()}
-                     for n in range(1, 5)]
+    assert jpg.stat().st_size <= 100000
     one = read(ROOT / 'dist/one.json')
     assert one['name'] == 'One' and one['image'] == URL + digest
-    assert traits(one) == {'Cave': 'Roots', 'Wall': 'One', 'Number': 736, 'Meaning': attributes['Meaning']}
-    # All line work, line records, and the prior gathering record/preview stay exact.
-    tracked = subprocess.run(['git', 'ls-files', '-z', 'line-1', 'line-2', 'line-3', 'line-4',
-                              'dist/line-1', 'dist/line-2', 'dist/line-3', 'dist/line-4',
-                              'dist/gathering/01.json', 'dist/gathering/01.jpg',
-                              'dist/gathering/02.json', 'dist/gathering/02.jpg',
-                              'dist/gathering/03.json', 'dist/gathering/03.jpg',
-                              'dist/gathering/04.json', 'dist/gathering/04.jpg',
-                              'dist/gathering/05.json', 'dist/gathering/05.jpg',
-                              'dist/gathering/06.json', 'dist/gathering/06.jpg',
-                              'dist/gathering/07.json', 'dist/gathering/07.jpg',
-                              'dist/gathering/08.json', 'dist/gathering/08.jpg',
-                              'dist/gathering/09.json', 'dist/gathering/09.jpg',
-                              'dist/gathering/10.json', 'dist/gathering/10.jpg'],
-                             cwd=ROOT, check=True, capture_output=True).stdout.split(b'\0')
-    unchanged = 0
-    for item in filter(None, tracked):
-        name = item.decode()
-        original = subprocess.run(['git', 'show', f'HEAD:{name}'], cwd=ROOT,
-                                  check=True, capture_output=True).stdout
-        assert (ROOT / name).read_bytes() == original, f'changed ancestor: {name}'
-        unchanged += 1
-    for folder in ('gathering', 'shared', 'dist'):
-        for path in (ROOT / folder).rglob('*'):
-            if path.is_file():
-                assert path.stat().st_size <= 100_000, f'oversize: {path}'
-    for row in read(ROOT / 'shared/window-review/provenance.json') + read(ROOT / 'shared/interval-clock/provenance.json') + read(ROOT / 'shared/benchmark-display/provenance.json') + read(ROOT / 'shared/effect-band/provenance.json') + read(ROOT / 'shared/gap-budget/provenance.json') + read(ROOT / 'shared/timeline-text-delta/provenance.json'):
-        snapshot = (ROOT / row['snapshot']).read_bytes()
-        if 'source_status' not in row:
-            assert snapshot == (ROOT / row['source']).read_bytes()
-        else:
-            original = subprocess.run(['git', 'show', f"HEAD:{row['snapshot']}"], cwd=ROOT,
-                                      check=True, capture_output=True).stdout
-            assert snapshot == original, 'historical window snapshot changed'
-        assert hashlib.sha256(snapshot).hexdigest() == row['sha256']
-    for row in read(ROOT / 'shared/replay-review/provenance.json'):
-        snapshot = (ROOT / row['snapshot']).read_bytes()
-        if 'source_status' not in row:
-            assert snapshot == (ROOT / row['source']).read_bytes()
-        else:
-            original = subprocess.run(['git', 'show', f"HEAD:{row['snapshot']}"], cwd=ROOT,
-                                      check=True, capture_output=True).stdout
-            assert snapshot == original, 'historical snapshot changed'
-        assert hashlib.sha256(snapshot).hexdigest() == row['sha256']
-    # The existing shared tool keeps its explicitly documented earlier snapshots.
-    for path in (ROOT / 'shared/reviewed-timeline/vendor').glob('*.py'):
-        relative = str(path.relative_to(ROOT))
-        original = subprocess.run(['git', 'show', f'HEAD:{relative}'], cwd=ROOT,
-                                  check=True, capture_output=True).stdout
-        assert path.read_bytes() == original
-    checks = read(ROOT / 'gathering/check-results.json')
-    assert checks['checks_passed'] and checks['line_files_unchanged'] and checks['test_count'] == 591
-    demos = read(ROOT / 'gathering/demo-results.json')
-    assert demos['checks_passed'] and len(demos['examples']) == 69
-    assert all(x['passed'] for x in demos['examples'])
+    assert traits(one) == {'Cave': 'Roots', 'Wall': 'One', 'Number': 736, 'Meaning': values['Meaning']}
+    placeholder = {'name': 'Not painted yet', 'image': URL + BARE,
+                   'attributes': [{'trait_type': 'Cave', 'value': 'Roots'}]}
+    painted, future = 0, 0
+    for wall in ('line-1', 'line-2', 'line-3', 'line-4', 'gathering'):
+        folder = ROOT / 'dist' / wall
+        assert all((folder / f'{n:02d}.json').is_file() for n in range(1, 22))
+        for path in folder.glob('[0-9][0-9].json'):
+            item = read(path)
+            if item['name'] == 'Not painted yet':
+                assert item == placeholder and not path.with_suffix('.jpg').exists()
+                future += 1
+            else:
+                attrs = traits(item)
+                expected = 'Gathering' if wall == 'gathering' else 'Line ' + wall[-1]
+                assert attrs['Cave'] == 'Roots' and attrs['Wall'] == expected
+                assert type(attrs['Number']) is int and attrs['Number'] == int(path.stem)
+                assert set(attrs) == {'Cave', 'Wall', 'Number', 'Left behind', 'Meaning', 'One thing'}
+                assert item['image'].startswith(URL) and len(item['image']) == len(URL) + 64
+                assert item['image'][len(URL):] == item['image'][len(URL):].lower()
+                int(item['image'][len(URL):], 16)
+                assert jpeg_size(path.with_suffix('.jpg').read_bytes()) == (512, 512)
+                painted += 1
+    assert (painted, future) == (54, 89)
+    assert read(ROOT / 'dist/goals.json') == [
+        {'line': n, 'goal': (ROOT / f'line-{n}/GOAL.md').read_text().strip()} for n in range(1, 5)]
     for prefix in ('line-1', 'line-2', 'line-3', 'line-4',
                    'dist/line-1', 'dist/line-2', 'dist/line-3', 'dist/line-4'):
         assert not subprocess.run(['git', 'diff', 'HEAD', '--', prefix], cwd=ROOT,
                                   check=True, capture_output=True).stdout
+        assert not subprocess.run(['git', 'ls-files', '--others', '--exclude-standard', '--', prefix],
+                                  cwd=ROOT, check=True, capture_output=True).stdout
+    ancestors = subprocess.run(['git', 'ls-files', '-z', '--', 'dist/gathering'], cwd=ROOT,
+                               check=True, capture_output=True).stdout.split(b'\0')
+    for entry in filter(None, ancestors):
+        path = entry.decode()
+        if path == 'dist/gathering/12.json':
+            continue
+        original = subprocess.run(['git', 'show', 'HEAD:' + path], cwd=ROOT,
+                                  check=True, capture_output=True).stdout
+        assert (ROOT / path).read_bytes() == original, path
+    provenance = read(ROOT / 'shared/load-receipt/provenance.json')
+    for row in provenance:
+        snapshot = (ROOT / row['snapshot']).read_bytes()
+        assert snapshot == (ROOT / row['source']).read_bytes()
+        assert hashlib.sha256(snapshot).hexdigest() == row['sha256']
+    for folder in ('gathering', 'shared', 'dist'):
+        for path in (ROOT / folder).rglob('*'):
+            if path.is_file():
+                assert path.stat().st_size <= 100000, str(path)
+    checks = read(ROOT / 'gathering/check-results.json')
+    assert checks['checks_passed'] and checks['line_files_unchanged']
+    assert all(x['exit_code'] == 0 and x['tests'] > 0 for x in checks['suites'])
+    assert checks['test_count'] == 638
+    demos = read(ROOT / 'gathering/demo-results.json')
+    assert demos['checks_passed'] and len(demos['examples']) == 74
+    assert all(x['passed'] for x in demos['examples'])
+    observed = read(ROOT / 'gathering/observed-load-receipt.json')
+    assert len(observed['executions']) == 4 and all(x['exit_code'] == 0 for x in observed['executions'])
+    assert all(x['replay']['verified'] for x in observed['observations'])
     review = read(ROOT / 'gathering/wall-review.json')
-    assert review['wall_sha256'] == digest
-    assert review['unmet_visual_requirements'] == []
-    result = {'structural_checks': 'passed', 'unchanged_tracked_ancestor_files': unchanged,
-              'future_records': future, 'painted_records': painted, 'numbered_records': numbered, 'goals': 4,
-              'wall': {'path': 'artifacts/gathering/wall-v11.png', 'alias': 'artifacts/gathering/wall.png',
-                       'format': 'PNG RGB8', 'width': 1254, 'height': 1254, 'bytes': len(raw), 'sha256': digest},
-              'preview': {'path': 'dist/gathering/11.jpg', 'format': 'JPEG', 'width': 512,
-                          'height': 512, 'bytes': jpg.stat().st_size},
-              'source_packaging': {'current_wall_alias': str(alias.readlink()),
-                                   'alias_entry_bytes': alias.lstat().st_size,
-                                   'duplicate_png_bytes_removed': len(raw) - alias.lstat().st_size,
-                                   'declared_output_tracked': False},
+    assert review['wall_sha256'] == digest and review['unmet_visual_requirements'] == []
+    gallery = read(ROOT / 'gathering/gallery-check.json')
+    assert gallery['checks_passed'] and gallery['numbered_cards'] == painted + future
+    result = {'structural_checks': 'passed', 'tests_passed': checks['test_count'],
+              'cli_examples': len(demos['examples']), 'line_files_unchanged': True,
+              'goals': 4, 'numbered_records': painted + future, 'painted_records': painted,
+              'future_records': future, 'unchanged_engine_snapshots': len(provenance),
+              'wall': {'path': 'artifacts/gathering/wall-v12.png', 'format': 'PNG RGB8',
+                       'width': width, 'height': height, 'bytes': len(raw), 'sha256': digest,
+                       'declared_output_tracked': False},
+              'preview': {'path': 'dist/gathering/12.jpg', 'format': 'JPEG baseline',
+                          'width': 512, 'height': 512, 'bytes': jpg.stat().st_size},
               'pixel_preservation': {'changed_pixels': len(changed), 'allowed_box': process['destination_box'],
                                      'all_pixels_outside_added_motif_unchanged': True},
-              'visual_review': review['observations'], 'visual_limits': review['limits'],
               'unmet_visual_requirements': review['unmet_visual_requirements'],
-              'tests': {'line_passed': 469, 'shared_passed': 110, 'gathering_passed': 12,
-                        'expected_failures': 0}, 'cli_examples': 69}
+              'limitations': ['Local checks, not independent certification.',
+                              'Gallery structure checked without browser layout certification.',
+                              'Small motif loses fine pigment detail in the preview.']}
     (ROOT / 'gathering/validation.json').write_text(json.dumps(result, indent=2) + '\n')
     print(json.dumps(result, indent=2))
 

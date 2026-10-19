@@ -1,24 +1,16 @@
 {
-  "wall_sha256": "8c3c480ea51201f637568338832c10a366bec31b85c271d97d8155aff9d18b04",
-  "format": "PNG RGB8 noninterlaced",
-  "width": 1254,
-  "height": 1254,
-  "preview_format": "baseline JPEG",
-  "preview_width": 512,
-  "preview_height": 512,
-  "hands": {
-    "left_digits": 5,
-    "right_digits": 5,
-    "new_hands_or_stencils": 0
-  },
+  "wall_sha256": "d23d6bfc85792e4379a85c704705900c359e512d2b2f5efbeda287e014e665c6",
+  "method": "Visual inspection of final full PNG and actual 512px JPEG; decoded pixel comparison against Gathering 11.",
   "observations": [
-    "Warm rock, cracks, torchlight, framing, central Pepe and ancestral marks remain visible.",
-    "Small charcoal and ochre pair with a broken chalk arc appears on lower-left bare rock.",
-    "No letters, numbers, captions, signatures, logos, watermarks, borders, people or prohibited symbols observed."
+    "Main Pepe retains broad mouth and heavy-lidded eyes; ancestral figure and all earlier glyphs stay in place.",
+    "Left hand: four fingers and one thumb, five digits total. Right hand: four fingers and one thumb, five digits total. No new hands or handprints.",
+    "Added only three charcoal pebbles, one chalk fleck and yellow ochre bowl on bare foreground rock.",
+    "Warm rough stone, torchlight, cracks and square framing preserved.",
+    "No letters, numbers, captions, signatures, logos, watermarks, frames or prohibited symbols observed."
   ],
   "limits": [
-    "Visual inspection is by the contributor, not independent artistic approval.",
-    "The new motif is subtle in the 512-pixel preview."
+    "Visual observation is local, not independent artistic approval.",
+    "Small motif loses fine pigment detail at 512 pixels."
   ],
   "unmet_visual_requirements": []
 }

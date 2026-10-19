@@ -2,6 +2,116 @@
   "checks_passed": true,
   "examples": [
     {
+      "name": "shared interval accounting receipt",
+      "command": [
+        "python3",
+        "-B",
+        "shared/load-receipt/load_receipt.py",
+        "demo"
+      ],
+      "expected_exit": 0,
+      "exit_code": 0,
+      "passed": true,
+      "observed": {
+        "rehashed_histogram_forgery_rejected": true
+      }
+    },
+    {
+      "name": "literal bidi lexical scope",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/bidi-scope/bidi_scope.py",
+        "--demo"
+      ],
+      "expected_exit": 0,
+      "exit_code": 0,
+      "passed": true,
+      "observed": {
+        "status_counts": {
+          "closed-by-pdf": 1,
+          "closed-by-pdi": 2,
+          "ended-at-paragraph": 1,
+          "ignored-pdf-at-isolate": 1,
+          "matched-pdf": 1,
+          "matched-pdi": 2,
+          "unmatched-pdi": 1
+        },
+        "max_lexical_depth": 2,
+        "analysis_complete": true,
+        "assessment": "review-controls"
+      }
+    },
+    {
+      "name": "bidi review actual gathering source",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/bidi-scope/bidi_scope.py",
+        "--file",
+        "gathering/check_tools.py"
+      ],
+      "expected_exit": 0,
+      "exit_code": 0,
+      "passed": true,
+      "observed": {
+        "status_counts": {},
+        "max_lexical_depth": 0,
+        "analysis_complete": true,
+        "assessment": "no-covered-controls"
+      }
+    },
+    {
+      "name": "timeline interval-depth profile",
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/timeline-load/timeline_load.py",
+        "demo"
+      ],
+      "expected_exit": 0,
+      "exit_code": 0,
+      "passed": true,
+      "observed": {
+        "duration_by_depth_us": {
+          "0": 1000000,
+          "1": 2000000,
+          "2": 2000000
+        },
+        "replay": {
+          "clock_uncertainty_ms": 500,
+          "events": 3,
+          "omitted": 1,
+          "sources": 1,
+          "verified": true
+        },
+        "counts": {
+          "intersecting_events": 3,
+          "maximum_interval_depth": 2,
+          "segments_not_shown": 0,
+          "segments_shown": 5,
+          "segments_total": 5,
+          "timestamped_events": 3,
+          "undated_lines": 1
+        }
+      }
+    },
+    {
+      "name": "worksheet receipt replay",
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/worksheet-receipt/worksheet_receipt.py",
+        "demo"
+      ],
+      "expected_exit": 0,
+      "exit_code": 0,
+      "passed": true,
+      "observed": {
+        "rehashed_altered_intermediate_rejected": true
+      }
+    },
+    {
       "name": "shared timeline and Unicode change review",
       "command": [
         "python3",

@@ -1,57 +1,43 @@
 {
   "structural_checks": "passed",
-  "unchanged_tracked_ancestor_files": 449,
-  "future_records": 90,
-  "painted_records": 50,
-  "numbered_records": 140,
+  "tests_passed": 638,
+  "cli_examples": 74,
+  "line_files_unchanged": true,
   "goals": 4,
+  "numbered_records": 143,
+  "painted_records": 54,
+  "future_records": 89,
+  "unchanged_engine_snapshots": 7,
   "wall": {
-    "path": "artifacts/gathering/wall-v11.png",
-    "alias": "artifacts/gathering/wall.png",
+    "path": "artifacts/gathering/wall-v12.png",
     "format": "PNG RGB8",
     "width": 1254,
     "height": 1254,
-    "bytes": 3955677,
-    "sha256": "8c3c480ea51201f637568338832c10a366bec31b85c271d97d8155aff9d18b04"
-  },
-  "preview": {
-    "path": "dist/gathering/11.jpg",
-    "format": "JPEG",
-    "width": 512,
-    "height": 512,
-    "bytes": 98161
-  },
-  "source_packaging": {
-    "current_wall_alias": "wall-v11.png",
-    "alias_entry_bytes": 12,
-    "duplicate_png_bytes_removed": 3955665,
+    "bytes": 4010583,
+    "sha256": "d23d6bfc85792e4379a85c704705900c359e512d2b2f5efbeda287e014e665c6",
     "declared_output_tracked": false
   },
+  "preview": {
+    "path": "dist/gathering/12.jpg",
+    "format": "JPEG baseline",
+    "width": 512,
+    "height": 512,
+    "bytes": 98470
+  },
   "pixel_preservation": {
-    "changed_pixels": 4463,
+    "changed_pixels": 3347,
     "allowed_box": [
-      160,
-      970,
-      345,
-      1071
+      454,
+      1133,
+      582,
+      1205
     ],
     "all_pixels_outside_added_motif_unchanged": true
   },
-  "visual_review": [
-    "Warm rock, cracks, torchlight, framing, central Pepe and ancestral marks remain visible.",
-    "Small charcoal and ochre pair with a broken chalk arc appears on lower-left bare rock.",
-    "No letters, numbers, captions, signatures, logos, watermarks, borders, people or prohibited symbols observed."
-  ],
-  "visual_limits": [
-    "Visual inspection is by the contributor, not independent artistic approval.",
-    "The new motif is subtle in the 512-pixel preview."
-  ],
   "unmet_visual_requirements": [],
-  "tests": {
-    "line_passed": 469,
-    "shared_passed": 110,
-    "gathering_passed": 12,
-    "expected_failures": 0
-  },
-  "cli_examples": 69
+  "limitations": [
+    "Local checks, not independent certification.",
+    "Gallery structure checked without browser layout certification.",
+    "Small motif loses fine pigment detail in the preview."
+  ]
 }

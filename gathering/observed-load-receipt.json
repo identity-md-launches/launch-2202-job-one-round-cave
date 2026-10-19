@@ -1,0 +1,1482 @@
+{
+  "data_kind": "observed_local_process_journal",
+  "executions": [
+    {
+      "tool": "cluster-verdict",
+      "command": [
+        "python3",
+        "-B",
+        "line-1/tools/cluster-verdict/cluster_verdict.py",
+        "--demo"
+      ],
+      "start": "2026-10-19T00:24:37.987826Z",
+      "end": "2026-10-19T00:24:38.043879Z",
+      "exit_code": 0,
+      "stdout_sha256": "c578084786bd0141952baae79cde0739573441db2747abce7a3f689115bbc24b"
+    },
+    {
+      "tool": "bidi-scope",
+      "command": [
+        "python3",
+        "-B",
+        "line-2/tools/bidi-scope/bidi_scope.py",
+        "--demo"
+      ],
+      "start": "2026-10-19T00:24:38.043975Z",
+      "end": "2026-10-19T00:24:38.089275Z",
+      "exit_code": 0,
+      "stdout_sha256": "0923c00e7d903a47a3a60b915be3f6da4fcbd6613f69fc2d7850bf358a8915fb"
+    },
+    {
+      "tool": "timeline-load",
+      "command": [
+        "python3",
+        "-B",
+        "line-3/tools/timeline-load/timeline_load.py",
+        "demo"
+      ],
+      "start": "2026-10-19T00:24:38.089322Z",
+      "end": "2026-10-19T00:24:38.138533Z",
+      "exit_code": 0,
+      "stdout_sha256": "c1c1bc005c94d982f1a48fc1ae889ae2c6232d988290841cc3d6b698c68b4fa0"
+    },
+    {
+      "tool": "worksheet-receipt",
+      "command": [
+        "python3",
+        "-B",
+        "line-4/tools/worksheet-receipt/worksheet_receipt.py",
+        "demo"
+      ],
+      "start": "2026-10-19T00:24:38.138576Z",
+      "end": "2026-10-19T00:24:38.212050Z",
+      "exit_code": 0,
+      "stdout_sha256": "14b4ea5464b69cda9cbc00cefccc7c9444f09b183b99be63044601f99a48f259"
+    }
+  ],
+  "observations": [
+    {
+      "asserted_clock_uncertainty_ms": 0,
+      "receipt": {
+        "schema": "load-receipt/1",
+        "sources_sha256": {
+          "load_receipt.py": "a1ee1bd63c448a785374c918bbffda906116815bb6567fdde94e371ac406ce50",
+          "engines/timeline/timeline_load.py": "da1653788d2c49621942cd1da56e544fcfd3dbb00695c1e5aab8be3130263d1a",
+          "engines/timeline/replay.py": "d77a8a28268ce860aac890926720d4cd278535ff89b7930e2f6fad45acf2f0c8",
+          "engines/timeline/vendor/time_flint.py": "caa513722a9767e908dc4a5e49711e623e0a34c8b18753c3d01cda8167988e38",
+          "engines/timeline/vendor/__init__.py": "7b170ee8a9c7182e7232fb81e1ac60be5a08619dce449c9500e2b3b740248ea2",
+          "engines/worksheet/worksheet_receipt.py": "5da520b1476c14ad9626482c55229ed41278b220a490f4e03a0a6dacb28da629",
+          "engines/worksheet/worksheet_flint.py": "09593e0004a11aced0e7efd0d55d4ff0c44de0856bc241d460af6e500d17bb65",
+          "engines/worksheet/engine.py": "c683e558cdbdf6cf73d4b32572b6fa498b80e7816483b882bf2d51adfff3062e"
+        },
+        "request": {
+          "pack": {
+            "format": "timeline-replay/1",
+            "engine_sha256": "caa513722a9767e908dc4a5e49711e623e0a34c8b18753c3d01cda8167988e38",
+            "options": {
+              "ignore_unmatched": false,
+              "clock_uncertainty_ms": 0
+            },
+            "inputs": [
+              {
+                "source": "observed-local-cli.log",
+                "sha256": "973c8852378a66261a6c1db342e49abfec850798be3ccbffa0219d6f4bfd3567",
+                "base64": "MjAyNi0xMC0xOVQwMDoyNDozNy45ODc4MjZaIGNsdXN0ZXItdmVyZGljdCBzdGFydAoyMDI2LTEwLTE5VDAwOjI0OjM4LjA0Mzg3OVogY2x1c3Rlci12ZXJkaWN0IGV4aXQ9MAoyMDI2LTEwLTE5VDAwOjI0OjM4LjA0Mzk3NVogYmlkaS1zY29wZSBzdGFydAoyMDI2LTEwLTE5VDAwOjI0OjM4LjA4OTI3NVogYmlkaS1zY29wZSBleGl0PTAKMjAyNi0xMC0xOVQwMDoyNDozOC4wODkzMjJaIHRpbWVsaW5lLWxvYWQgc3RhcnQKMjAyNi0xMC0xOVQwMDoyNDozOC4xMzg1MzNaIHRpbWVsaW5lLWxvYWQgZXhpdD0wCjIwMjYtMTAtMTlUMDA6MjQ6MzguMTM4NTc2WiB3b3Jrc2hlZXQtcmVjZWlwdCBzdGFydAoyMDI2LTEwLTE5VDAwOjI0OjM4LjIxMjA1MFogd29ya3NoZWV0LXJlY2VpcHQgZXhpdD0wCg=="
+              }
+            ],
+            "timeline": {
+              "version": 1,
+              "sources": [
+                {
+                  "source": "observed-local-cli.log",
+                  "sha256": "973c8852378a66261a6c1db342e49abfec850798be3ccbffa0219d6f4bfd3567"
+                }
+              ],
+              "events": [
+                {
+                  "start_utc": "2026-10-19T00:24:37.987826Z",
+                  "end_utc_exclusive": "2026-10-19T00:24:37.987827Z",
+                  "precision": "6 fractional digit(s)",
+                  "source": "observed-local-cli.log",
+                  "line": 1,
+                  "line_sha256": "3166d2fc43e4bf30c097d89270e56608fb55a65de4c19d13517db413039b4124",
+                  "message": "cluster-verdict start",
+                  "overlap_group": 1
+                },
+                {
+                  "start_utc": "2026-10-19T00:24:38.043879Z",
+                  "end_utc_exclusive": "2026-10-19T00:24:38.043880Z",
+                  "precision": "6 fractional digit(s)",
+                  "source": "observed-local-cli.log",
+                  "line": 2,
+                  "line_sha256": "738b328d2907e1dd2ed4828c629a0e995b44b4047ff19d0366380fc0f78adcb9",
+                  "message": "cluster-verdict exit=0",
+                  "overlap_group": 2
+                },
+                {
+                  "start_utc": "2026-10-19T00:24:38.043975Z",
+                  "end_utc_exclusive": "2026-10-19T00:24:38.043976Z",
+                  "precision": "6 fractional digit(s)",
+                  "source": "observed-local-cli.log",
+                  "line": 3,
+                  "line_sha256": "1ccc8efadba7836ed25110b1b673df28ca8a325416c61c3c6751d9bc2ce5d16e",
+                  "message": "bidi-scope start",
+                  "overlap_group": 3
+                },
+                {
+                  "start_utc": "2026-10-19T00:24:38.089275Z",
+                  "end_utc_exclusive": "2026-10-19T00:24:38.089276Z",
+                  "precision": "6 fractional digit(s)",
+                  "source": "observed-local-cli.log",
+                  "line": 4,
+                  "line_sha256": "ab06b12b3f9ad9ecca0661d844ca3486520b5808d5b4f992078b7ccb443ccc56",
+                  "message": "bidi-scope exit=0",
+                  "overlap_group": 4
+                },
+                {
+                  "start_utc": "2026-10-19T00:24:38.089322Z",
+                  "end_utc_exclusive": "2026-10-19T00:24:38.089323Z",
+                  "precision": "6 fractional digit(s)",
+                  "source": "observed-local-cli.log",
+                  "line": 5,
+                  "line_sha256": "b142eb38c9dfce17b7a64f81490304711e65892eed6b9521e75bf55122a6b3da",
+                  "message": "timeline-load start",
+                  "overlap_group": 5
+                },
+                {
+                  "start_utc": "2026-10-19T00:24:38.138533Z",
+                  "end_utc_exclusive": "2026-10-19T00:24:38.138534Z",
+                  "precision": "6 fractional digit(s)",
+                  "source": "observed-local-cli.log",
+                  "line": 6,
+                  "line_sha256": "259052d320f9144a72a6756556815ea56256f86efde591dd75f7d9e1cae455ba",
+                  "message": "timeline-load exit=0",
+                  "overlap_group": 6
+                },
+                {
+                  "start_utc": "2026-10-19T00:24:38.138576Z",
+                  "end_utc_exclusive": "2026-10-19T00:24:38.138577Z",
+                  "precision": "6 fractional digit(s)",
+                  "source": "observed-local-cli.log",
+                  "line": 7,
+                  "line_sha256": "7d6ba554a82ed589caaa48bd65419c89c7bdd34accf3147d1a790ed367439ffe",
+                  "message": "worksheet-receipt start",
+                  "overlap_group": 7
+                },
+                {
+                  "start_utc": "2026-10-19T00:24:38.212050Z",
+                  "end_utc_exclusive": "2026-10-19T00:24:38.212051Z",
+                  "precision": "6 fractional digit(s)",
+                  "source": "observed-local-cli.log",
+                  "line": 8,
+                  "line_sha256": "f1dd136ad2b56d01a3b4d63a1698f36fc8d818bc318d87a1333cb312c7d4c6a6",
+                  "message": "worksheet-receipt exit=0",
+                  "overlap_group": 8
+                }
+              ],
+              "omitted": []
+            }
+          },
+          "start": "2026-10-19T00:24:37.987808Z",
+          "end": "2026-10-19T00:24:38.212093Z",
+          "max_uncovered": "(224285 / 1000000) * s",
+          "max_mean_depth": "8"
+        },
+        "coverage": {
+          "format": "timeline-load/1",
+          "replay": {
+            "verified": true,
+            "sources": 1,
+            "events": 8,
+            "omitted": 0,
+            "clock_uncertainty_ms": 0
+          },
+          "window": {
+            "start_utc_inclusive": "2026-10-19T00:24:37.987808Z",
+            "end_utc_exclusive": "2026-10-19T00:24:38.212093Z",
+            "duration_us": 224285
+          },
+          "counts": {
+            "timestamped_events": 8,
+            "intersecting_events": 8,
+            "undated_lines": 0,
+            "segments_total": 17,
+            "segments_shown": 0,
+            "segments_not_shown": 17,
+            "maximum_interval_depth": 1
+          },
+          "duration_by_depth_us": {
+            "0": 224277,
+            "1": 8
+          },
+          "segments": [],
+          "engine_sha256": "caa513722a9767e908dc4a5e49711e623e0a34c8b18753c3d01cda8167988e38",
+          "options": {
+            "ignore_unmatched": false,
+            "clock_uncertainty_ms": 0
+          },
+          "interpretation": "Depth counts timestamp uncertainty intervals compatible with each instant; it does not count confirmed simultaneous events or measure service load. Zero depth means no dated interval covers that span in this evidence model, not proof of inactivity. Undated lines cannot be placed. Clock bounds are analyst assertions. Replay checks consistency, not authenticity or completeness. Source bytes and messages are omitted from this report."
+        },
+        "worksheet_receipt": {
+          "schema": "worksheet-receipt/1",
+          "sources_sha256": {
+            "engine.py": "c683e558cdbdf6cf73d4b32572b6fa498b80e7816483b882bf2d51adfff3062e",
+            "worksheet_flint.py": "09593e0004a11aced0e7efd0d55d4ff0c44de0856bc241d460af6e500d17bb65",
+            "worksheet_receipt.py": "5da520b1476c14ad9626482c55229ed41278b220a490f4e03a0a6dacb28da629"
+          },
+          "request": {
+            "schema": "worksheet-flint/1",
+            "steps": [
+              {
+                "expression": "(224285 / 1000000) * s",
+                "name": "window",
+                "to": "s"
+              },
+              {
+                "expect": "$window",
+                "expression": "(224285 / 1000000) * s",
+                "name": "partition",
+                "to": "s"
+              },
+              {
+                "expression": "(8 / 1000000) * s",
+                "name": "interval_time",
+                "to": "s"
+              },
+              {
+                "at_most": "(224285 / 1000000) * s",
+                "expression": "(224277 / 1000000) * s",
+                "name": "uncovered",
+                "to": "s"
+              },
+              {
+                "expression": "$window - $uncovered",
+                "name": "covered",
+                "to": "s"
+              },
+              {
+                "expect": "$window",
+                "expression": "$covered + $uncovered",
+                "name": "accounted",
+                "to": "s"
+              },
+              {
+                "at_most": "8",
+                "expression": "$interval_time / $window",
+                "name": "mean_depth"
+              },
+              {
+                "at_least": "0",
+                "at_most": "1",
+                "expression": "$covered / $window",
+                "name": "covered_fraction"
+              }
+            ]
+          },
+          "result": {
+            "schema": "worksheet-flint/1",
+            "steps": [
+              {
+                "request": {
+                  "expression": "(224285 / 1000000) * s",
+                  "name": "window",
+                  "to": "s"
+                },
+                "dependencies": [],
+                "base_value": "44857/200000",
+                "base_unit": "s",
+                "dimensions": {
+                  "length": 0,
+                  "mass": 0,
+                  "time": 1,
+                  "data": 0
+                },
+                "value": "0.224285",
+                "unit": "s",
+                "checks": {},
+                "passes": true
+              },
+              {
+                "request": {
+                  "expect": "$window",
+                  "expression": "(224285 / 1000000) * s",
+                  "name": "partition",
+                  "to": "s"
+                },
+                "dependencies": [
+                  "window"
+                ],
+                "base_value": "44857/200000",
+                "base_unit": "s",
+                "dimensions": {
+                  "length": 0,
+                  "mass": 0,
+                  "time": 1,
+                  "data": 0
+                },
+                "value": "0.224285",
+                "unit": "s",
+                "checks": {
+                  "expect": {
+                    "base_value": "44857/200000",
+                    "passes": true
+                  }
+                },
+                "passes": true
+              },
+              {
+                "request": {
+                  "expression": "(8 / 1000000) * s",
+                  "name": "interval_time",
+                  "to": "s"
+                },
+                "dependencies": [],
+                "base_value": "1/125000",
+                "base_unit": "s",
+                "dimensions": {
+                  "length": 0,
+                  "mass": 0,
+                  "time": 1,
+                  "data": 0
+                },
+                "value": "0.000008",
+                "unit": "s",
+                "checks": {},
+                "passes": true
+              },
+              {
+                "request": {
+                  "at_most": "(224285 / 1000000) * s",
+                  "expression": "(224277 / 1000000) * s",
+                  "name": "uncovered",
+                  "to": "s"
+                },
+                "dependencies": [],
+                "base_value": "224277/1000000",
+                "base_unit": "s",
+                "dimensions": {
+                  "length": 0,
+                  "mass": 0,
+                  "time": 1,
+                  "data": 0
+                },
+                "value": "0.224277",
+                "unit": "s",
+                "checks": {
+                  "at_most": {
+                    "base_value": "44857/200000",
+                    "passes": true
+                  }
+                },
+                "passes": true
+              },
+              {
+                "request": {
+                  "expression": "$window - $uncovered",
+                  "name": "covered",
+                  "to": "s"
+                },
+                "dependencies": [
+                  "uncovered",
+                  "window"
+                ],
+                "base_value": "1/125000",
+                "base_unit": "s",
+                "dimensions": {
+                  "length": 0,
+                  "mass": 0,
+                  "time": 1,
+                  "data": 0
+                },
+                "value": "0.000008",
+                "unit": "s",
+                "checks": {},
+                "passes": true
+              },
+              {
+                "request": {
+                  "expect": "$window",
+                  "expression": "$covered + $uncovered",
+                  "name": "accounted",
+                  "to": "s"
+                },
+                "dependencies": [
+                  "covered",
+                  "uncovered",
+                  "window"
+                ],
+                "base_value": "44857/200000",
+                "base_unit": "s",
+                "dimensions": {
+                  "length": 0,
+                  "mass": 0,
+                  "time": 1,
+                  "data": 0
+                },
+                "value": "0.224285",
+                "unit": "s",
+                "checks": {
+                  "expect": {
+                    "base_value": "44857/200000",
+                    "passes": true
+                  }
+                },
+                "passes": true
+              },
+              {
+                "request": {
+                  "at_most": "8",
+                  "expression": "$interval_time / $window",
+                  "name": "mean_depth"
+                },
+                "dependencies": [
+                  "interval_time",
+                  "window"
+                ],
+                "base_value": "8/224285",
+                "base_unit": "1",
+                "dimensions": {
+                  "length": 0,
+                  "mass": 0,
+                  "time": 0,
+                  "data": 0
+                },
+                "value": "8/224285",
+                "unit": "1",
+                "checks": {
+                  "at_most": {
+                    "base_value": "8",
+                    "passes": true
+                  }
+                },
+                "passes": true
+              },
+              {
+                "request": {
+                  "at_least": "0",
+                  "at_most": "1",
+                  "expression": "$covered / $window",
+                  "name": "covered_fraction"
+                },
+                "dependencies": [
+                  "covered",
+                  "window"
+                ],
+                "base_value": "8/224285",
+                "base_unit": "1",
+                "dimensions": {
+                  "length": 0,
+                  "mass": 0,
+                  "time": 0,
+                  "data": 0
+                },
+                "value": "8/224285",
+                "unit": "1",
+                "checks": {
+                  "at_least": {
+                    "base_value": "0",
+                    "passes": true
+                  },
+                  "at_most": {
+                    "base_value": "1",
+                    "passes": true
+                  }
+                },
+                "passes": true
+              }
+            ],
+            "passes": true
+          },
+          "calculation_exit": 0,
+          "receipt_sha256": "10055955b4e49e2c5aeb473a5987bad6258fd3ef7b07ce7b88484f03a47404e1"
+        },
+        "calculation_exit": 0,
+        "receipt_sha256": "abced67e81e4e04acc0e551d66241372d24e408e042ce5cc79ca1e1cbe25dc41"
+      },
+      "replay": {
+        "verified": true,
+        "receipt_sha256": "abced67e81e4e04acc0e551d66241372d24e408e042ce5cc79ca1e1cbe25dc41",
+        "calculation_exit": 0,
+        "coverage": {
+          "format": "timeline-load/1",
+          "replay": {
+            "verified": true,
+            "sources": 1,
+            "events": 8,
+            "omitted": 0,
+            "clock_uncertainty_ms": 0
+          },
+          "window": {
+            "start_utc_inclusive": "2026-10-19T00:24:37.987808Z",
+            "end_utc_exclusive": "2026-10-19T00:24:38.212093Z",
+            "duration_us": 224285
+          },
+          "counts": {
+            "timestamped_events": 8,
+            "intersecting_events": 8,
+            "undated_lines": 0,
+            "segments_total": 17,
+            "segments_shown": 0,
+            "segments_not_shown": 17,
+            "maximum_interval_depth": 1
+          },
+          "duration_by_depth_us": {
+            "0": 224277,
+            "1": 8
+          },
+          "segments": [],
+          "engine_sha256": "caa513722a9767e908dc4a5e49711e623e0a34c8b18753c3d01cda8167988e38",
+          "options": {
+            "ignore_unmatched": false,
+            "clock_uncertainty_ms": 0
+          },
+          "interpretation": "Depth counts timestamp uncertainty intervals compatible with each instant; it does not count confirmed simultaneous events or measure service load. Zero depth means no dated interval covers that span in this evidence model, not proof of inactivity. Undated lines cannot be placed. Clock bounds are analyst assertions. Replay checks consistency, not authenticity or completeness. Source bytes and messages are omitted from this report."
+        },
+        "worksheet_result": {
+          "schema": "worksheet-flint/1",
+          "steps": [
+            {
+              "request": {
+                "expression": "(224285 / 1000000) * s",
+                "name": "window",
+                "to": "s"
+              },
+              "dependencies": [],
+              "base_value": "44857/200000",
+              "base_unit": "s",
+              "dimensions": {
+                "length": 0,
+                "mass": 0,
+                "time": 1,
+                "data": 0
+              },
+              "value": "0.224285",
+              "unit": "s",
+              "checks": {},
+              "passes": true
+            },
+            {
+              "request": {
+                "expect": "$window",
+                "expression": "(224285 / 1000000) * s",
+                "name": "partition",
+                "to": "s"
+              },
+              "dependencies": [
+                "window"
+              ],
+              "base_value": "44857/200000",
+              "base_unit": "s",
+              "dimensions": {
+                "length": 0,
+                "mass": 0,
+                "time": 1,
+                "data": 0
+              },
+              "value": "0.224285",
+              "unit": "s",
+              "checks": {
+                "expect": {
+                  "base_value": "44857/200000",
+                  "passes": true
+                }
+              },
+              "passes": true
+            },
+            {
+              "request": {
+                "expression": "(8 / 1000000) * s",
+                "name": "interval_time",
+                "to": "s"
+              },
+              "dependencies": [],
+              "base_value": "1/125000",
+              "base_unit": "s",
+              "dimensions": {
+                "length": 0,
+                "mass": 0,
+                "time": 1,
+                "data": 0
+              },
+              "value": "0.000008",
+              "unit": "s",
+              "checks": {},
+              "passes": true
+            },
+            {
+              "request": {
+                "at_most": "(224285 / 1000000) * s",
+                "expression": "(224277 / 1000000) * s",
+                "name": "uncovered",
+                "to": "s"
+              },
+              "dependencies": [],
+              "base_value": "224277/1000000",
+              "base_unit": "s",
+              "dimensions": {
+                "length": 0,
+                "mass": 0,
+                "time": 1,
+                "data": 0
+              },
+              "value": "0.224277",
+              "unit": "s",
+              "checks": {
+                "at_most": {
+                  "base_value": "44857/200000",
+                  "passes": true
+                }
+              },
+              "passes": true
+            },
+            {
+              "request": {
+                "expression": "$window - $uncovered",
+                "name": "covered",
+                "to": "s"
+              },
+              "dependencies": [
+                "uncovered",
+                "window"
+              ],
+              "base_value": "1/125000",
+              "base_unit": "s",
+              "dimensions": {
+                "length": 0,
+                "mass": 0,
+                "time": 1,
+                "data": 0
+              },
+              "value": "0.000008",
+              "unit": "s",
+              "checks": {},
+              "passes": true
+            },
+            {
+              "request": {
+                "expect": "$window",
+                "expression": "$covered + $uncovered",
+                "name": "accounted",
+                "to": "s"
+              },
+              "dependencies": [
+                "covered",
+                "uncovered",
+                "window"
+              ],
+              "base_value": "44857/200000",
+              "base_unit": "s",
+              "dimensions": {
+                "length": 0,
+                "mass": 0,
+                "time": 1,
+                "data": 0
+              },
+              "value": "0.224285",
+              "unit": "s",
+              "checks": {
+                "expect": {
+                  "base_value": "44857/200000",
+                  "passes": true
+                }
+              },
+              "passes": true
+            },
+            {
+              "request": {
+                "at_most": "8",
+                "expression": "$interval_time / $window",
+                "name": "mean_depth"
+              },
+              "dependencies": [
+                "interval_time",
+                "window"
+              ],
+              "base_value": "8/224285",
+              "base_unit": "1",
+              "dimensions": {
+                "length": 0,
+                "mass": 0,
+                "time": 0,
+                "data": 0
+              },
+              "value": "8/224285",
+              "unit": "1",
+              "checks": {
+                "at_most": {
+                  "base_value": "8",
+                  "passes": true
+                }
+              },
+              "passes": true
+            },
+            {
+              "request": {
+                "at_least": "0",
+                "at_most": "1",
+                "expression": "$covered / $window",
+                "name": "covered_fraction"
+              },
+              "dependencies": [
+                "covered",
+                "window"
+              ],
+              "base_value": "8/224285",
+              "base_unit": "1",
+              "dimensions": {
+                "length": 0,
+                "mass": 0,
+                "time": 0,
+                "data": 0
+              },
+              "value": "8/224285",
+              "unit": "1",
+              "checks": {
+                "at_least": {
+                  "base_value": "0",
+                  "passes": true
+                },
+                "at_most": {
+                  "base_value": "1",
+                  "passes": true
+                }
+              },
+              "passes": true
+            }
+          ],
+          "passes": true
+        },
+        "interpretation": [
+          "Depth is timestamp-uncertainty interval coverage, not confirmed concurrency or service load.",
+          "Zero depth is not downtime; widening asserted clock bounds can change every total.",
+          "Budgets are supplied policy, not statistical or availability guarantees.",
+          "Replay checks internal consistency, not log truth, completeness or clock accuracy.",
+          "Receipt embeds unredacted source logs; hashes do not establish authorship or creation time.",
+          "Retain the content digest independently to identify a receipt; whitespace is not pinned."
+        ]
+      }
+    },
+    {
+      "asserted_clock_uncertainty_ms": 750,
+      "receipt": {
+        "schema": "load-receipt/1",
+        "sources_sha256": {
+          "load_receipt.py": "a1ee1bd63c448a785374c918bbffda906116815bb6567fdde94e371ac406ce50",
+          "engines/timeline/timeline_load.py": "da1653788d2c49621942cd1da56e544fcfd3dbb00695c1e5aab8be3130263d1a",
+          "engines/timeline/replay.py": "d77a8a28268ce860aac890926720d4cd278535ff89b7930e2f6fad45acf2f0c8",
+          "engines/timeline/vendor/time_flint.py": "caa513722a9767e908dc4a5e49711e623e0a34c8b18753c3d01cda8167988e38",
+          "engines/timeline/vendor/__init__.py": "7b170ee8a9c7182e7232fb81e1ac60be5a08619dce449c9500e2b3b740248ea2",
+          "engines/worksheet/worksheet_receipt.py": "5da520b1476c14ad9626482c55229ed41278b220a490f4e03a0a6dacb28da629",
+          "engines/worksheet/worksheet_flint.py": "09593e0004a11aced0e7efd0d55d4ff0c44de0856bc241d460af6e500d17bb65",
+          "engines/worksheet/engine.py": "c683e558cdbdf6cf73d4b32572b6fa498b80e7816483b882bf2d51adfff3062e"
+        },
+        "request": {
+          "pack": {
+            "format": "timeline-replay/1",
+            "engine_sha256": "caa513722a9767e908dc4a5e49711e623e0a34c8b18753c3d01cda8167988e38",
+            "options": {
+              "ignore_unmatched": false,
+              "clock_uncertainty_ms": 750
+            },
+            "inputs": [
+              {
+                "source": "observed-local-cli.log",
+                "sha256": "973c8852378a66261a6c1db342e49abfec850798be3ccbffa0219d6f4bfd3567",
+                "base64": "MjAyNi0xMC0xOVQwMDoyNDozNy45ODc4MjZaIGNsdXN0ZXItdmVyZGljdCBzdGFydAoyMDI2LTEwLTE5VDAwOjI0OjM4LjA0Mzg3OVogY2x1c3Rlci12ZXJkaWN0IGV4aXQ9MAoyMDI2LTEwLTE5VDAwOjI0OjM4LjA0Mzk3NVogYmlkaS1zY29wZSBzdGFydAoyMDI2LTEwLTE5VDAwOjI0OjM4LjA4OTI3NVogYmlkaS1zY29wZSBleGl0PTAKMjAyNi0xMC0xOVQwMDoyNDozOC4wODkzMjJaIHRpbWVsaW5lLWxvYWQgc3RhcnQKMjAyNi0xMC0xOVQwMDoyNDozOC4xMzg1MzNaIHRpbWVsaW5lLWxvYWQgZXhpdD0wCjIwMjYtMTAtMTlUMDA6MjQ6MzguMTM4NTc2WiB3b3Jrc2hlZXQtcmVjZWlwdCBzdGFydAoyMDI2LTEwLTE5VDAwOjI0OjM4LjIxMjA1MFogd29ya3NoZWV0LXJlY2VpcHQgZXhpdD0wCg=="
+              }
+            ],
+            "timeline": {
+              "version": 2,
+              "sources": [
+                {
+                  "source": "observed-local-cli.log",
+                  "sha256": "973c8852378a66261a6c1db342e49abfec850798be3ccbffa0219d6f4bfd3567"
+                }
+              ],
+              "events": [
+                {
+                  "start_utc": "2026-10-19T00:24:37.237826Z",
+                  "end_utc_exclusive": "2026-10-19T00:24:38.737827Z",
+                  "precision": "6 fractional digit(s)",
+                  "source": "observed-local-cli.log",
+                  "line": 1,
+                  "line_sha256": "3166d2fc43e4bf30c097d89270e56608fb55a65de4c19d13517db413039b4124",
+                  "message": "cluster-verdict start",
+                  "reported_start_utc": "2026-10-19T00:24:37.987826Z",
+                  "reported_end_utc_exclusive": "2026-10-19T00:24:37.987827Z",
+                  "overlap_group": 1
+                },
+                {
+                  "start_utc": "2026-10-19T00:24:37.293879Z",
+                  "end_utc_exclusive": "2026-10-19T00:24:38.793880Z",
+                  "precision": "6 fractional digit(s)",
+                  "source": "observed-local-cli.log",
+                  "line": 2,
+                  "line_sha256": "738b328d2907e1dd2ed4828c629a0e995b44b4047ff19d0366380fc0f78adcb9",
+                  "message": "cluster-verdict exit=0",
+                  "reported_start_utc": "2026-10-19T00:24:38.043879Z",
+                  "reported_end_utc_exclusive": "2026-10-19T00:24:38.043880Z",
+                  "overlap_group": 1
+                },
+                {
+                  "start_utc": "2026-10-19T00:24:37.293975Z",
+                  "end_utc_exclusive": "2026-10-19T00:24:38.793976Z",
+                  "precision": "6 fractional digit(s)",
+                  "source": "observed-local-cli.log",
+                  "line": 3,
+                  "line_sha256": "1ccc8efadba7836ed25110b1b673df28ca8a325416c61c3c6751d9bc2ce5d16e",
+                  "message": "bidi-scope start",
+                  "reported_start_utc": "2026-10-19T00:24:38.043975Z",
+                  "reported_end_utc_exclusive": "2026-10-19T00:24:38.043976Z",
+                  "overlap_group": 1
+                },
+                {
+                  "start_utc": "2026-10-19T00:24:37.339275Z",
+                  "end_utc_exclusive": "2026-10-19T00:24:38.839276Z",
+                  "precision": "6 fractional digit(s)",
+                  "source": "observed-local-cli.log",
+                  "line": 4,
+                  "line_sha256": "ab06b12b3f9ad9ecca0661d844ca3486520b5808d5b4f992078b7ccb443ccc56",
+                  "message": "bidi-scope exit=0",
+                  "reported_start_utc": "2026-10-19T00:24:38.089275Z",
+                  "reported_end_utc_exclusive": "2026-10-19T00:24:38.089276Z",
+                  "overlap_group": 1
+                },
+                {
+                  "start_utc": "2026-10-19T00:24:37.339322Z",
+                  "end_utc_exclusive": "2026-10-19T00:24:38.839323Z",
+                  "precision": "6 fractional digit(s)",
+                  "source": "observed-local-cli.log",
+                  "line": 5,
+                  "line_sha256": "b142eb38c9dfce17b7a64f81490304711e65892eed6b9521e75bf55122a6b3da",
+                  "message": "timeline-load start",
+                  "reported_start_utc": "2026-10-19T00:24:38.089322Z",
+                  "reported_end_utc_exclusive": "2026-10-19T00:24:38.089323Z",
+                  "overlap_group": 1
+                },
+                {
+                  "start_utc": "2026-10-19T00:24:37.388533Z",
+                  "end_utc_exclusive": "2026-10-19T00:24:38.888534Z",
+                  "precision": "6 fractional digit(s)",
+                  "source": "observed-local-cli.log",
+                  "line": 6,
+                  "line_sha256": "259052d320f9144a72a6756556815ea56256f86efde591dd75f7d9e1cae455ba",
+                  "message": "timeline-load exit=0",
+                  "reported_start_utc": "2026-10-19T00:24:38.138533Z",
+                  "reported_end_utc_exclusive": "2026-10-19T00:24:38.138534Z",
+                  "overlap_group": 1
+                },
+                {
+                  "start_utc": "2026-10-19T00:24:37.388576Z",
+                  "end_utc_exclusive": "2026-10-19T00:24:38.888577Z",
+                  "precision": "6 fractional digit(s)",
+                  "source": "observed-local-cli.log",
+                  "line": 7,
+                  "line_sha256": "7d6ba554a82ed589caaa48bd65419c89c7bdd34accf3147d1a790ed367439ffe",
+                  "message": "worksheet-receipt start",
+                  "reported_start_utc": "2026-10-19T00:24:38.138576Z",
+                  "reported_end_utc_exclusive": "2026-10-19T00:24:38.138577Z",
+                  "overlap_group": 1
+                },
+                {
+                  "start_utc": "2026-10-19T00:24:37.462050Z",
+                  "end_utc_exclusive": "2026-10-19T00:24:38.962051Z",
+                  "precision": "6 fractional digit(s)",
+                  "source": "observed-local-cli.log",
+                  "line": 8,
+                  "line_sha256": "f1dd136ad2b56d01a3b4d63a1698f36fc8d818bc318d87a1333cb312c7d4c6a6",
+                  "message": "worksheet-receipt exit=0",
+                  "reported_start_utc": "2026-10-19T00:24:38.212050Z",
+                  "reported_end_utc_exclusive": "2026-10-19T00:24:38.212051Z",
+                  "overlap_group": 1
+                }
+              ],
+              "omitted": [],
+              "clock_model": {
+                "kind": "asserted_symmetric_bound",
+                "uncertainty_ms": 750,
+                "assumption": "Each source clock differs from UTC by at most this bound at every event.",
+                "precision_assumption": "Timestamps are truncated to their displayed precision."
+              }
+            }
+          },
+          "start": "2026-10-19T00:24:37.987808Z",
+          "end": "2026-10-19T00:24:38.212093Z",
+          "max_uncovered": "(224285 / 1000000) * s",
+          "max_mean_depth": "8"
+        },
+        "coverage": {
+          "format": "timeline-load/1",
+          "replay": {
+            "verified": true,
+            "sources": 1,
+            "events": 8,
+            "omitted": 0,
+            "clock_uncertainty_ms": 750
+          },
+          "window": {
+            "start_utc_inclusive": "2026-10-19T00:24:37.987808Z",
+            "end_utc_exclusive": "2026-10-19T00:24:38.212093Z",
+            "duration_us": 224285
+          },
+          "counts": {
+            "timestamped_events": 8,
+            "intersecting_events": 8,
+            "undated_lines": 0,
+            "segments_total": 1,
+            "segments_shown": 0,
+            "segments_not_shown": 1,
+            "maximum_interval_depth": 8
+          },
+          "duration_by_depth_us": {
+            "8": 224285
+          },
+          "segments": [],
+          "engine_sha256": "caa513722a9767e908dc4a5e49711e623e0a34c8b18753c3d01cda8167988e38",
+          "options": {
+            "ignore_unmatched": false,
+            "clock_uncertainty_ms": 750
+          },
+          "interpretation": "Depth counts timestamp uncertainty intervals compatible with each instant; it does not count confirmed simultaneous events or measure service load. Zero depth means no dated interval covers that span in this evidence model, not proof of inactivity. Undated lines cannot be placed. Clock bounds are analyst assertions. Replay checks consistency, not authenticity or completeness. Source bytes and messages are omitted from this report."
+        },
+        "worksheet_receipt": {
+          "schema": "worksheet-receipt/1",
+          "sources_sha256": {
+            "engine.py": "c683e558cdbdf6cf73d4b32572b6fa498b80e7816483b882bf2d51adfff3062e",
+            "worksheet_flint.py": "09593e0004a11aced0e7efd0d55d4ff0c44de0856bc241d460af6e500d17bb65",
+            "worksheet_receipt.py": "5da520b1476c14ad9626482c55229ed41278b220a490f4e03a0a6dacb28da629"
+          },
+          "request": {
+            "schema": "worksheet-flint/1",
+            "steps": [
+              {
+                "expression": "(224285 / 1000000) * s",
+                "name": "window",
+                "to": "s"
+              },
+              {
+                "expect": "$window",
+                "expression": "(224285 / 1000000) * s",
+                "name": "partition",
+                "to": "s"
+              },
+              {
+                "expression": "(1794280 / 1000000) * s",
+                "name": "interval_time",
+                "to": "s"
+              },
+              {
+                "at_most": "(224285 / 1000000) * s",
+                "expression": "(0 / 1000000) * s",
+                "name": "uncovered",
+                "to": "s"
+              },
+              {
+                "expression": "$window - $uncovered",
+                "name": "covered",
+                "to": "s"
+              },
+              {
+                "expect": "$window",
+                "expression": "$covered + $uncovered",
+                "name": "accounted",
+                "to": "s"
+              },
+              {
+                "at_most": "8",
+                "expression": "$interval_time / $window",
+                "name": "mean_depth"
+              },
+              {
+                "at_least": "0",
+                "at_most": "1",
+                "expression": "$covered / $window",
+                "name": "covered_fraction"
+              }
+            ]
+          },
+          "result": {
+            "schema": "worksheet-flint/1",
+            "steps": [
+              {
+                "request": {
+                  "expression": "(224285 / 1000000) * s",
+                  "name": "window",
+                  "to": "s"
+                },
+                "dependencies": [],
+                "base_value": "44857/200000",
+                "base_unit": "s",
+                "dimensions": {
+                  "length": 0,
+                  "mass": 0,
+                  "time": 1,
+                  "data": 0
+                },
+                "value": "0.224285",
+                "unit": "s",
+                "checks": {},
+                "passes": true
+              },
+              {
+                "request": {
+                  "expect": "$window",
+                  "expression": "(224285 / 1000000) * s",
+                  "name": "partition",
+                  "to": "s"
+                },
+                "dependencies": [
+                  "window"
+                ],
+                "base_value": "44857/200000",
+                "base_unit": "s",
+                "dimensions": {
+                  "length": 0,
+                  "mass": 0,
+                  "time": 1,
+                  "data": 0
+                },
+                "value": "0.224285",
+                "unit": "s",
+                "checks": {
+                  "expect": {
+                    "base_value": "44857/200000",
+                    "passes": true
+                  }
+                },
+                "passes": true
+              },
+              {
+                "request": {
+                  "expression": "(1794280 / 1000000) * s",
+                  "name": "interval_time",
+                  "to": "s"
+                },
+                "dependencies": [],
+                "base_value": "44857/25000",
+                "base_unit": "s",
+                "dimensions": {
+                  "length": 0,
+                  "mass": 0,
+                  "time": 1,
+                  "data": 0
+                },
+                "value": "1.79428",
+                "unit": "s",
+                "checks": {},
+                "passes": true
+              },
+              {
+                "request": {
+                  "at_most": "(224285 / 1000000) * s",
+                  "expression": "(0 / 1000000) * s",
+                  "name": "uncovered",
+                  "to": "s"
+                },
+                "dependencies": [],
+                "base_value": "0",
+                "base_unit": "s",
+                "dimensions": {
+                  "length": 0,
+                  "mass": 0,
+                  "time": 1,
+                  "data": 0
+                },
+                "value": "0",
+                "unit": "s",
+                "checks": {
+                  "at_most": {
+                    "base_value": "44857/200000",
+                    "passes": true
+                  }
+                },
+                "passes": true
+              },
+              {
+                "request": {
+                  "expression": "$window - $uncovered",
+                  "name": "covered",
+                  "to": "s"
+                },
+                "dependencies": [
+                  "uncovered",
+                  "window"
+                ],
+                "base_value": "44857/200000",
+                "base_unit": "s",
+                "dimensions": {
+                  "length": 0,
+                  "mass": 0,
+                  "time": 1,
+                  "data": 0
+                },
+                "value": "0.224285",
+                "unit": "s",
+                "checks": {},
+                "passes": true
+              },
+              {
+                "request": {
+                  "expect": "$window",
+                  "expression": "$covered + $uncovered",
+                  "name": "accounted",
+                  "to": "s"
+                },
+                "dependencies": [
+                  "covered",
+                  "uncovered",
+                  "window"
+                ],
+                "base_value": "44857/200000",
+                "base_unit": "s",
+                "dimensions": {
+                  "length": 0,
+                  "mass": 0,
+                  "time": 1,
+                  "data": 0
+                },
+                "value": "0.224285",
+                "unit": "s",
+                "checks": {
+                  "expect": {
+                    "base_value": "44857/200000",
+                    "passes": true
+                  }
+                },
+                "passes": true
+              },
+              {
+                "request": {
+                  "at_most": "8",
+                  "expression": "$interval_time / $window",
+                  "name": "mean_depth"
+                },
+                "dependencies": [
+                  "interval_time",
+                  "window"
+                ],
+                "base_value": "8",
+                "base_unit": "1",
+                "dimensions": {
+                  "length": 0,
+                  "mass": 0,
+                  "time": 0,
+                  "data": 0
+                },
+                "value": "8",
+                "unit": "1",
+                "checks": {
+                  "at_most": {
+                    "base_value": "8",
+                    "passes": true
+                  }
+                },
+                "passes": true
+              },
+              {
+                "request": {
+                  "at_least": "0",
+                  "at_most": "1",
+                  "expression": "$covered / $window",
+                  "name": "covered_fraction"
+                },
+                "dependencies": [
+                  "covered",
+                  "window"
+                ],
+                "base_value": "1",
+                "base_unit": "1",
+                "dimensions": {
+                  "length": 0,
+                  "mass": 0,
+                  "time": 0,
+                  "data": 0
+                },
+                "value": "1",
+                "unit": "1",
+                "checks": {
+                  "at_least": {
+                    "base_value": "0",
+                    "passes": true
+                  },
+                  "at_most": {
+                    "base_value": "1",
+                    "passes": true
+                  }
+                },
+                "passes": true
+              }
+            ],
+            "passes": true
+          },
+          "calculation_exit": 0,
+          "receipt_sha256": "aabb6758702e9d818342197ca1d6ec1974832a433b6fb97db1c8a365bc12c349"
+        },
+        "calculation_exit": 0,
+        "receipt_sha256": "84fe21a206afa4717805f9b52ea9f6e30e45cfb145ecc7965261152c9f4e6db0"
+      },
+      "replay": {
+        "verified": true,
+        "receipt_sha256": "84fe21a206afa4717805f9b52ea9f6e30e45cfb145ecc7965261152c9f4e6db0",
+        "calculation_exit": 0,
+        "coverage": {
+          "format": "timeline-load/1",
+          "replay": {
+            "verified": true,
+            "sources": 1,
+            "events": 8,
+            "omitted": 0,
+            "clock_uncertainty_ms": 750
+          },
+          "window": {
+            "start_utc_inclusive": "2026-10-19T00:24:37.987808Z",
+            "end_utc_exclusive": "2026-10-19T00:24:38.212093Z",
+            "duration_us": 224285
+          },
+          "counts": {
+            "timestamped_events": 8,
+            "intersecting_events": 8,
+            "undated_lines": 0,
+            "segments_total": 1,
+            "segments_shown": 0,
+            "segments_not_shown": 1,
+            "maximum_interval_depth": 8
+          },
+          "duration_by_depth_us": {
+            "8": 224285
+          },
+          "segments": [],
+          "engine_sha256": "caa513722a9767e908dc4a5e49711e623e0a34c8b18753c3d01cda8167988e38",
+          "options": {
+            "ignore_unmatched": false,
+            "clock_uncertainty_ms": 750
+          },
+          "interpretation": "Depth counts timestamp uncertainty intervals compatible with each instant; it does not count confirmed simultaneous events or measure service load. Zero depth means no dated interval covers that span in this evidence model, not proof of inactivity. Undated lines cannot be placed. Clock bounds are analyst assertions. Replay checks consistency, not authenticity or completeness. Source bytes and messages are omitted from this report."
+        },
+        "worksheet_result": {
+          "schema": "worksheet-flint/1",
+          "steps": [
+            {
+              "request": {
+                "expression": "(224285 / 1000000) * s",
+                "name": "window",
+                "to": "s"
+              },
+              "dependencies": [],
+              "base_value": "44857/200000",
+              "base_unit": "s",
+              "dimensions": {
+                "length": 0,
+                "mass": 0,
+                "time": 1,
+                "data": 0
+              },
+              "value": "0.224285",
+              "unit": "s",
+              "checks": {},
+              "passes": true
+            },
+            {
+              "request": {
+                "expect": "$window",
+                "expression": "(224285 / 1000000) * s",
+                "name": "partition",
+                "to": "s"
+              },
+              "dependencies": [
+                "window"
+              ],
+              "base_value": "44857/200000",
+              "base_unit": "s",
+              "dimensions": {
+                "length": 0,
+                "mass": 0,
+                "time": 1,
+                "data": 0
+              },
+              "value": "0.224285",
+              "unit": "s",
+              "checks": {
+                "expect": {
+                  "base_value": "44857/200000",
+                  "passes": true
+                }
+              },
+              "passes": true
+            },
+            {
+              "request": {
+                "expression": "(1794280 / 1000000) * s",
+                "name": "interval_time",
+                "to": "s"
+              },
+              "dependencies": [],
+              "base_value": "44857/25000",
+              "base_unit": "s",
+              "dimensions": {
+                "length": 0,
+                "mass": 0,
+                "time": 1,
+                "data": 0
+              },
+              "value": "1.79428",
+              "unit": "s",
+              "checks": {},
+              "passes": true
+            },
+            {
+              "request": {
+                "at_most": "(224285 / 1000000) * s",
+                "expression": "(0 / 1000000) * s",
+                "name": "uncovered",
+                "to": "s"
+              },
+              "dependencies": [],
+              "base_value": "0",
+              "base_unit": "s",
+              "dimensions": {
+                "length": 0,
+                "mass": 0,
+                "time": 1,
+                "data": 0
+              },
+              "value": "0",
+              "unit": "s",
+              "checks": {
+                "at_most": {
+                  "base_value": "44857/200000",
+                  "passes": true
+                }
+              },
+              "passes": true
+            },
+            {
+              "request": {
+                "expression": "$window - $uncovered",
+                "name": "covered",
+                "to": "s"
+              },
+              "dependencies": [
+                "uncovered",
+                "window"
+              ],
+              "base_value": "44857/200000",
+              "base_unit": "s",
+              "dimensions": {
+                "length": 0,
+                "mass": 0,
+                "time": 1,
+                "data": 0
+              },
+              "value": "0.224285",
+              "unit": "s",
+              "checks": {},
+              "passes": true
+            },
+            {
+              "request": {
+                "expect": "$window",
+                "expression": "$covered + $uncovered",
+                "name": "accounted",
+                "to": "s"
+              },
+              "dependencies": [
+                "covered",
+                "uncovered",
+                "window"
+              ],
+              "base_value": "44857/200000",
+              "base_unit": "s",
+              "dimensions": {
+                "length": 0,
+                "mass": 0,
+                "time": 1,
+                "data": 0
+              },
+              "value": "0.224285",
+              "unit": "s",
+              "checks": {
+                "expect": {
+                  "base_value": "44857/200000",
+                  "passes": true
+                }
+              },
+              "passes": true
+            },
+            {
+              "request": {
+                "at_most": "8",
+                "expression": "$interval_time / $window",
+                "name": "mean_depth"
+              },
+              "dependencies": [
+                "interval_time",
+                "window"
+              ],
+              "base_value": "8",
+              "base_unit": "1",
+              "dimensions": {
+                "length": 0,
+                "mass": 0,
+                "time": 0,
+                "data": 0
+              },
+              "value": "8",
+              "unit": "1",
+              "checks": {
+                "at_most": {
+                  "base_value": "8",
+                  "passes": true
+                }
+              },
+              "passes": true
+            },
+            {
+              "request": {
+                "at_least": "0",
+                "at_most": "1",
+                "expression": "$covered / $window",
+                "name": "covered_fraction"
+              },
+              "dependencies": [
+                "covered",
+                "window"
+              ],
+              "base_value": "1",
+              "base_unit": "1",
+              "dimensions": {
+                "length": 0,
+                "mass": 0,
+                "time": 0,
+                "data": 0
+              },
+              "value": "1",
+              "unit": "1",
+              "checks": {
+                "at_least": {
+                  "base_value": "0",
+                  "passes": true
+                },
+                "at_most": {
+                  "base_value": "1",
+                  "passes": true
+                }
+              },
+              "passes": true
+            }
+          ],
+          "passes": true
+        },
+        "interpretation": [
+          "Depth is timestamp-uncertainty interval coverage, not confirmed concurrency or service load.",
+          "Zero depth is not downtime; widening asserted clock bounds can change every total.",
+          "Budgets are supplied policy, not statistical or availability guarantees.",
+          "Replay checks internal consistency, not log truth, completeness or clock accuracy.",
+          "Receipt embeds unredacted source logs; hashes do not establish authorship or creation time.",
+          "Retain the content digest independently to identify a receipt; whitespace is not pinned."
+        ]
+      }
+    }
+  ],
+  "limitations": "Actual local process observation timestamps, not an external service incident. Tool demo payloads are synthetic. Clock accuracy is unmeasured; 750 ms is illustrative. Budgets allow the whole window uncovered and at most eight compatible intervals on average; they are post hoc examples, not SLOs. Coverage and mean depth do not measure runtime, downtime, confirmed concurrency or service load."
+}

@@ -132,3 +132,21 @@ python3 -B shared/timeline-text-delta/timeline_text_delta.py demo
 The synthetic demo adds one covered right-to-left override finding and changes
 the displayed relation of a cited event pair. Five integration checks pass.
 Neither comparison authenticates logs or proves deception or causality.
+
+## Twelfth gathering: Load Receipt
+
+[Load Receipt](load-receipt/README.md) connects Line 3's fully replayed timeline
+depth histogram to Line 4's replayable exact worksheet. It checks the complete
+window partition, interval-time integral, mean depth, coverage fraction and two
+declared policies. Seven unchanged engine snapshots ship with provenance; copy
+the folder for standalone offline Python 3.10+ standard-library use.
+
+```sh
+python3 -B shared/load-receipt/load_receipt.py demo
+```
+
+Twelve integration checks pass, including rehashed histogram and arithmetic
+substitutions and copied-folder CLI use. Actual local tool-execution journal
+receipts under two asserted clock bounds are retained in the gathering report.
+Timestamp-interval depth is not measured service load, and zero coverage is not
+downtime. Earlier shared tools remain intact.

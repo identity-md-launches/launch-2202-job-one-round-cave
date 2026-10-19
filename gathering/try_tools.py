@@ -8,6 +8,11 @@ import sys
 
 ROOT = Path(__file__).resolve().parent.parent
 CASES = [
+ ('shared interval accounting receipt', ['shared/load-receipt/load_receipt.py', 'demo'], 0),
+ ('literal bidi lexical scope', ['line-2/tools/bidi-scope/bidi_scope.py', '--demo'], 0),
+ ('bidi review actual gathering source', ['line-2/tools/bidi-scope/bidi_scope.py', '--file', 'gathering/check_tools.py'], 0),
+ ('timeline interval-depth profile', ['line-3/tools/timeline-load/timeline_load.py', 'demo'], 0),
+ ('worksheet receipt replay', ['line-4/tools/worksheet-receipt/worksheet_receipt.py', 'demo'], 0),
  ('shared timeline and Unicode change review', ['shared/timeline-text-delta/timeline_text_delta.py', 'demo'], 0),
  ('whole-cluster exact verdict', ['line-1/tools/cluster-verdict/cluster_verdict.py', '--demo'], 0),
  ('Unicode finding delta', ['line-2/tools/unicode-delta/unicode_delta.py', '--demo'], 0),
@@ -103,7 +108,7 @@ def main():
                     'opening_lines': run.stdout.splitlines()[:7]}
                 row['passed'] &= row['text']['printable_ascii_and_lf']
             # Small numeric/evidence summaries; full reports are reproducible.
-            keys = ['clusters_checked', 'clusters_changing_decision_or_direction', 'durations_us', 'member_names', 'cases_changing_decision_or_direction', 'deletions_checked', 'details_omitted', 'complete_diagnostics_sha256', 'omitted_findings', 'total_bytes', 'token_count', 'distinct_skeletons', 'boundary', 'outside', 'margin', 'allowed_error', 'absolute_error', 'passes', 'case_count', 'recheck', 'rounded', 'exact_value', 'error', 'filters', 'comparison', 'lower', 'upper', 'within', 'pair', 'line_changes', 'consistent_replacement_rejected', 'runtime_mismatch_rejected', 'rejected_rehashed_replacement', 'analysis', 'asserted_total_bound_ms', 'different_valid_bound_rejected', 'matching_receipt', 'failed_bound_verified', 'failed_bound_calculation_exit', 'rehashed_altered_result_rejected', 'verified', 'retained_findings', 'truncated', 'altered_citation_rejected', 'paired_cases', 'table', 'test', 'candidates', 'comparison_threshold',
+            keys = ['status_counts', 'max_lexical_depth', 'analysis_complete', 'duration_by_depth_us', 'rehashed_histogram_forgery_rejected', 'rehashed_altered_intermediate_rejected', 'clusters_checked', 'clusters_changing_decision_or_direction', 'durations_us', 'member_names', 'cases_changing_decision_or_direction', 'deletions_checked', 'details_omitted', 'complete_diagnostics_sha256', 'omitted_findings', 'total_bytes', 'token_count', 'distinct_skeletons', 'boundary', 'outside', 'margin', 'allowed_error', 'absolute_error', 'passes', 'case_count', 'recheck', 'rounded', 'exact_value', 'error', 'filters', 'comparison', 'lower', 'upper', 'within', 'pair', 'line_changes', 'consistent_replacement_rejected', 'runtime_mismatch_rejected', 'rejected_rehashed_replacement', 'analysis', 'asserted_total_bound_ms', 'different_valid_bound_rejected', 'matching_receipt', 'failed_bound_verified', 'failed_bound_calculation_exit', 'rehashed_altered_result_rejected', 'verified', 'retained_findings', 'truncated', 'altered_citation_rejected', 'paired_cases', 'table', 'test', 'candidates', 'comparison_threshold',
                     'smallest_evaluated_size_meeting_target', 'sizes', 'finding_count',
                     'assessment', 'sha256', 'value', 'unit', 'check', 'replay',
                     'tampered_report_rejected', 'tampered_timeline_rejected', 'review_errors',
