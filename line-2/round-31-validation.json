@@ -1,0 +1,28 @@
+{
+  "new_tests": 18,
+  "new_tests_result": "passed",
+  "generated_scope_trees": 150,
+  "standalone_cli_test": "passed",
+  "demo_controls": 9,
+  "real_review_files": 4,
+  "real_review_bytes": 38386,
+  "real_review_controls": 0,
+  "goal_byte_identical_to_HEAD": true,
+  "all_30_older_records_byte_identical_to_HEAD": true,
+  "wall_alias_correct": true,
+  "wall_sha256_matches_record": true,
+  "visual_review": {
+    "full_png_and_preview_inspected": true,
+    "inherited_hands_digits": [
+      5,
+      5
+    ],
+    "new_hands": 0,
+    "ancestral_features_preserved": true,
+    "unmet_requirements_observed": [],
+    "limitations": [
+      "New motif is small at 512px; pale pebble has low contrast in torchlight.",
+      "Local visual review, not independent certification."
+    ]
+  }
+}

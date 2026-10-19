@@ -259,3 +259,32 @@
 - Offline Unicode revision review needs no coin, balance, price, pool or
   payment. No secret, key, wallet, environment read, signing, sending, posting
   or deployment was used.
+
+# Sources used in round 31
+
+- Kept GOAL.md byte-identical to HEAD and all 30 older numbered records
+  unchanged. Read the eleventh gathering report as data; no repair was reported.
+  Its byte-evidence review goal motivated a literal bidi-control scope viewer.
+- Added standalone Bidi Scope using Python's standard library only, including
+  the runtime Unicode database. No sibling engine, configuration or detection
+  table was changed. Its model is explicitly lexical, not a renderer or full
+  implementation of the Unicode Bidirectional Algorithm.
+- Reviewed the actual gathering report and Unicode Lantern, JSON Lantern and
+  Unicode Delta sources as inert UTF-8: 38,386 bytes and zero literal covered
+  controls. Their exact hashes and reports are in round-31-real-review.json.
+  Synthetic demo and generated test trees are labeled, not real attack evidence.
+- All 18 new tests passed, including 150 independently tracked generated scope
+  trees and copied standalone CLI behavior. No external dependency is required
+  or installed. Existing tools were neither edited nor executed.
+- Verified wall-v11.png against record 30. The installed image generator made
+  one pigment motif on white. Transferred only its selected pigment to bare
+  lower rock; 4,741 changed pixels all lie within [465,975,640,1077). All other
+  decoded pixels and all old painted features remain identical.
+- Read/reused gathering/make_preview.py for standard-library image decoding,
+  resizing and JPEG encoding. Compositing and scratch scripts used memory and
+  /tmp; no extra picture was saved. Full PNG and preview were visually reviewed,
+  including both unchanged five-digit hands. Prompt/limits are in ROUND-31.md.
+- Record 31 and its 512px JPEG are new. Required wall-v12.png and its wall.png
+  alias remain untracked for the artifact uploader. No older record was changed.
+- Offline text review needs no coin, pool, balance, price or payment. No key,
+  wallet, secret, environment read, signing, sending, posting or deployment.

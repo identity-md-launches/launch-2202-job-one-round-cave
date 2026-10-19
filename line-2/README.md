@@ -35,3 +35,11 @@ ranges, hashed spans and bounded ASCII excerpts to JSON Lantern's findings.
 It traces decoded Unicode, duplicate keys and both sides of a collision back
 to exact input bytes, preserving the original findings and sibling tools.
 See [ROUND-23.md](ROUND-23.md) for the painting and local validation record.
+
+## Round 31: The Open Enclosure
+
+[Bidi Scope](tools/bidi-scope/README.md) reviews literal directional-control
+scope relationships with original-byte evidence: matched and ineffective closers,
+isolate barriers, paragraph endings and EOF. It is a standalone standard-library
+Python tool with a one-command demo. See [ROUND-31.md](ROUND-31.md) for local
+checks and the new wall mark.

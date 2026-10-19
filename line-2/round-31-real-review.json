@@ -1,0 +1,137 @@
+{
+  "kind": "Actual inherited workspace documents, not synthetic attack observations",
+  "reviews": [
+    {
+      "path": "gathering/REPORT.md",
+      "report": {
+        "schema_version": 1,
+        "tool": "bidi-scope/1",
+        "source": "gathering/REPORT.md",
+        "source_sha256": "88ae12be2663abd888b324188749d92e4ec695f61633a6a32ccd8f175bbc9312",
+        "source_bytes": 10813,
+        "unicode_version": "15.0.0",
+        "engine_sha256": "822f4ae6efe7d80e858446ed66c77c7badb84cb2f3c9fe6c120fbe3b8835d798",
+        "controls": 0,
+        "status_counts": {},
+        "max_lexical_depth": 0,
+        "analysis_complete": true,
+        "retained_details": 0,
+        "omitted_details": 0,
+        "events": [],
+        "assessment": "no-covered-controls",
+        "coordinates": "Zero-based half-open original byte ranges and event indexes; one-based lines/byte columns; only LF increments the line.",
+        "model": "Lexical scopes: PDF closes a top embedding but never crosses an isolate; PDI ends the nearest isolate and its inner embeddings; Unicode B-class characters end open scopes; EOF retains open-at-eof.",
+        "limitations": [
+          "Not the Unicode Bidirectional Algorithm or a display-order prediction.",
+          "No embedding levels, depth overflow, FSI direction, paired-bracket or glyph analysis.",
+          "Rendering depth limits may cause actual controls to be ignored differently.",
+          "Literal UTF-8 only: no JSON/source escapes, HTML markup or language parsing.",
+          "Controls can be legitimate; balanced scopes do not establish safety or intent.",
+          "Does not detect lookalikes, other invisible characters or all Unicode risks.",
+          "Contexts are unredacted, at most 16 bytes per side, and may split UTF-8 characters.",
+          "All totals and relationships computed before detail truncation; referenced indexes may be omitted. Increase max_details to inspect them (up to 1000).",
+          "Hashes identify bytes, not authorship, authenticity or trustworthy provenance."
+        ]
+      }
+    },
+    {
+      "path": "line-2/tools/unicode-lantern/unicode_lantern.py",
+      "report": {
+        "schema_version": 1,
+        "tool": "bidi-scope/1",
+        "source": "line-2/tools/unicode-lantern/unicode_lantern.py",
+        "source_sha256": "e50d1fb77bd6cfd723c2dbd3749bedf2034c96ea3a2eaf88e4beac4610f6e2f5",
+        "source_bytes": 7810,
+        "unicode_version": "15.0.0",
+        "engine_sha256": "822f4ae6efe7d80e858446ed66c77c7badb84cb2f3c9fe6c120fbe3b8835d798",
+        "controls": 0,
+        "status_counts": {},
+        "max_lexical_depth": 0,
+        "analysis_complete": true,
+        "retained_details": 0,
+        "omitted_details": 0,
+        "events": [],
+        "assessment": "no-covered-controls",
+        "coordinates": "Zero-based half-open original byte ranges and event indexes; one-based lines/byte columns; only LF increments the line.",
+        "model": "Lexical scopes: PDF closes a top embedding but never crosses an isolate; PDI ends the nearest isolate and its inner embeddings; Unicode B-class characters end open scopes; EOF retains open-at-eof.",
+        "limitations": [
+          "Not the Unicode Bidirectional Algorithm or a display-order prediction.",
+          "No embedding levels, depth overflow, FSI direction, paired-bracket or glyph analysis.",
+          "Rendering depth limits may cause actual controls to be ignored differently.",
+          "Literal UTF-8 only: no JSON/source escapes, HTML markup or language parsing.",
+          "Controls can be legitimate; balanced scopes do not establish safety or intent.",
+          "Does not detect lookalikes, other invisible characters or all Unicode risks.",
+          "Contexts are unredacted, at most 16 bytes per side, and may split UTF-8 characters.",
+          "All totals and relationships computed before detail truncation; referenced indexes may be omitted. Increase max_details to inspect them (up to 1000).",
+          "Hashes identify bytes, not authorship, authenticity or trustworthy provenance."
+        ]
+      }
+    },
+    {
+      "path": "line-2/tools/json-lantern/json_lantern.py",
+      "report": {
+        "schema_version": 1,
+        "tool": "bidi-scope/1",
+        "source": "line-2/tools/json-lantern/json_lantern.py",
+        "source_sha256": "2a30a232b22c9a85744609cce3324a83361172276e961e8195a4acd6e8c0f87e",
+        "source_bytes": 8071,
+        "unicode_version": "15.0.0",
+        "engine_sha256": "822f4ae6efe7d80e858446ed66c77c7badb84cb2f3c9fe6c120fbe3b8835d798",
+        "controls": 0,
+        "status_counts": {},
+        "max_lexical_depth": 0,
+        "analysis_complete": true,
+        "retained_details": 0,
+        "omitted_details": 0,
+        "events": [],
+        "assessment": "no-covered-controls",
+        "coordinates": "Zero-based half-open original byte ranges and event indexes; one-based lines/byte columns; only LF increments the line.",
+        "model": "Lexical scopes: PDF closes a top embedding but never crosses an isolate; PDI ends the nearest isolate and its inner embeddings; Unicode B-class characters end open scopes; EOF retains open-at-eof.",
+        "limitations": [
+          "Not the Unicode Bidirectional Algorithm or a display-order prediction.",
+          "No embedding levels, depth overflow, FSI direction, paired-bracket or glyph analysis.",
+          "Rendering depth limits may cause actual controls to be ignored differently.",
+          "Literal UTF-8 only: no JSON/source escapes, HTML markup or language parsing.",
+          "Controls can be legitimate; balanced scopes do not establish safety or intent.",
+          "Does not detect lookalikes, other invisible characters or all Unicode risks.",
+          "Contexts are unredacted, at most 16 bytes per side, and may split UTF-8 characters.",
+          "All totals and relationships computed before detail truncation; referenced indexes may be omitted. Increase max_details to inspect them (up to 1000).",
+          "Hashes identify bytes, not authorship, authenticity or trustworthy provenance."
+        ]
+      }
+    },
+    {
+      "path": "line-2/tools/unicode-delta/unicode_delta.py",
+      "report": {
+        "schema_version": 1,
+        "tool": "bidi-scope/1",
+        "source": "line-2/tools/unicode-delta/unicode_delta.py",
+        "source_sha256": "564dd3685cbf9b8112b24aa4f478e8d8f6ebbe6a8fcbf4fb254af5bba4668f88",
+        "source_bytes": 11692,
+        "unicode_version": "15.0.0",
+        "engine_sha256": "822f4ae6efe7d80e858446ed66c77c7badb84cb2f3c9fe6c120fbe3b8835d798",
+        "controls": 0,
+        "status_counts": {},
+        "max_lexical_depth": 0,
+        "analysis_complete": true,
+        "retained_details": 0,
+        "omitted_details": 0,
+        "events": [],
+        "assessment": "no-covered-controls",
+        "coordinates": "Zero-based half-open original byte ranges and event indexes; one-based lines/byte columns; only LF increments the line.",
+        "model": "Lexical scopes: PDF closes a top embedding but never crosses an isolate; PDI ends the nearest isolate and its inner embeddings; Unicode B-class characters end open scopes; EOF retains open-at-eof.",
+        "limitations": [
+          "Not the Unicode Bidirectional Algorithm or a display-order prediction.",
+          "No embedding levels, depth overflow, FSI direction, paired-bracket or glyph analysis.",
+          "Rendering depth limits may cause actual controls to be ignored differently.",
+          "Literal UTF-8 only: no JSON/source escapes, HTML markup or language parsing.",
+          "Controls can be legitimate; balanced scopes do not establish safety or intent.",
+          "Does not detect lookalikes, other invisible characters or all Unicode risks.",
+          "Contexts are unredacted, at most 16 bytes per side, and may split UTF-8 characters.",
+          "All totals and relationships computed before detail truncation; referenced indexes may be omitted. Increase max_details to inspect them (up to 1000).",
+          "Hashes identify bytes, not authorship, authenticity or trustworthy provenance."
+        ]
+      }
+    }
+  ]
+}
